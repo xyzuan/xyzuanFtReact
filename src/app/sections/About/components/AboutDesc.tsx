@@ -23,11 +23,11 @@ function AboutDesc() {
           fontWeight: "100",
         }}
       >
-        Hi, I'm Jody Yuantoro, a third-year undergraduate student majoring in
-        Informatics at the University of Muhammadiyah Malang. I am an
-        enthusiastic Software Engineer who enjoys both design and coding. I'm
-        constantly eager to learn and improve my skills in order to provide the
-        most value to the company for which I will work.
+        Hi, I&apos;m Jody Yuantoro, a third-year undergraduate student majoring
+        in Informatics at the University of Muhammadiyah Malang. I&apos;m an
+        enthusiastic Software Engineer who enjoys both design and coding.
+        I&apos;m constantly eager to learn and improve my skills in order to
+        provide the most value to the company for which I will work.
       </Typography>
     </Grid>
   );

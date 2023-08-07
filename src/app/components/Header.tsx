@@ -10,7 +10,7 @@ function Header() {
         background: "#2e2e2e",
         color: "#fff",
         boxShadow: "none",
-        height: "120px",
+        height: "80px",
       }}
     >
       <Toolbar
@@ -28,7 +28,7 @@ function Header() {
           <Image width="58" height="58" src="/assets/xyzuan.svg" alt="" />
           <Box sx={{ flexGrow: 1 }} />
           <IconButton>
-            <Image width="52" height="52" src="/assets/NavBurger.svg" alt="" />
+            <Image width="42" height="52" src="/assets/NavBurger.svg" alt="" />
           </IconButton>
         </Container>
       </Toolbar>

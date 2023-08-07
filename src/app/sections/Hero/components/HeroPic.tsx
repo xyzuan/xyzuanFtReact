@@ -7,7 +7,7 @@ const HeroPic = ({}) => {
       sx={{
         borderRadius: "0 999px 999px 0px",
         maxHeight: "280px",
-        minHeight: "280px",
+        minHeight: "auto",
         overflow: "hidden",
         backgroundColor: "#CDCBCB",
         backgroundImage: `url("/assets/HeroCardBG.png")`,
@@ -18,6 +18,7 @@ const HeroPic = ({}) => {
           sx={{
             float: "left",
             fontSize: "48px",
+            fontWeight: "bold",
             lineHeight: "2.5rem",
             color: "#666666",
             paddingTop: "24px",
@@ -31,7 +32,7 @@ const HeroPic = ({}) => {
           ND.
         </Typography>
         <Image
-          width="290"
+          width="220"
           height="0"
           src="/assets/HeroMe.png"
           alt=""

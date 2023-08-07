@@ -1,4 +1,4 @@
-import { Container, Grid, IconButton, Typography } from "@mui/material";
+import { Container, Grid, IconButton, Link, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
@@ -20,21 +20,41 @@ function Footer() {
         &lt;/xyzuan.
       </Typography>
       <Grid>
-        <Typography sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}>
-          HOME
-        </Typography>
-        <Typography sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}>
-          ABOUT
-        </Typography>
-        <Typography sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}>
-          TIMELINE
-        </Typography>
-        <Typography sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}>
-          PORTOFOLIO
-        </Typography>
-        <Typography sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}>
-          CONTACT
-        </Typography>
+        <Link href="#" color="inherit" underline="none">
+          <Typography
+            sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}
+          >
+            HOME
+          </Typography>
+        </Link>
+        <Link href="#about" color="inherit" underline="none">
+          <Typography
+            sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}
+          >
+            ABOUT
+          </Typography>
+        </Link>
+        <Link href="#timeline" color="inherit" underline="none">
+          <Typography
+            sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}
+          >
+            TIMELINE
+          </Typography>
+        </Link>
+        <Link href="#portofolio" color="inherit" underline="none">
+          <Typography
+            sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}
+          >
+            PORTOFOLIO
+          </Typography>
+        </Link>
+        <Link href="#contact" color="inherit" underline="none">
+          <Typography
+            sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}
+          >
+            CONTACT
+          </Typography>
+        </Link>
         <div
           style={{
             paddingTop: "18px",

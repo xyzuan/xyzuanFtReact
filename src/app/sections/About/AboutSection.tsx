@@ -6,6 +6,7 @@ import AboutDesc from "./components/AboutDesc";
 function AboutSection() {
   return (
     <Container
+      id="about"
       sx={{
         backgroundColor: "#212121",
       }}

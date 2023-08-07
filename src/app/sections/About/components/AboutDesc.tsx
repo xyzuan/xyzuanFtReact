@@ -23,11 +23,15 @@ function AboutDesc() {
           fontWeight: "100",
         }}
       >
-        Hi, I&apos;m Jody Yuantoro, a third-year undergraduate student majoring
-        in Informatics at the University of Muhammadiyah Malang. I&apos;m an
-        enthusiastic Software Engineer who enjoys both design and coding.
-        I&apos;m constantly eager to learn and improve my skills in order to
-        provide the most value to the company for which I will work.
+        I am an Android Developer and Mobile UI/UX Designer currently pursuing a
+        major in Informatics Engineering at the University of Muhammadiyah
+        Malang. With a passion for creating innovative mobile applications, I
+        possess strong skills in Java programming languages, along with
+        proficiency in Android Development. My design background enables me to
+        develop visually appealing and user-friendly interfaces. Committed to
+        continuous learning and staying updated with industry trends, I bring a
+        combination of technical expertise, design proficiency, and a strong
+        educational foundation to my work.
       </Typography>
     </Grid>
   );

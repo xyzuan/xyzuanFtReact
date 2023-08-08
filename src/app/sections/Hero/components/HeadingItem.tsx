@@ -31,6 +31,7 @@ const HeadingItem: React.FC<HeadingItemProps> = ({ heading }) => {
         transition: "0.3s ease",
         color: isHeld ? "white" : "#A9A9A9",
         "&:hover": {
+          fontSize: "68px",
           color: "white",
         },
       }}

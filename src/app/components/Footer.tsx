@@ -70,36 +70,51 @@ function Footer() {
           paddingY: "24px",
         }}
       >
-        <IconButton>
-          <Image width="42" height="42" src="/assets/github.png" alt="github" />
-        </IconButton>
-        <IconButton>
-          <Image
-            width="42"
-            height="42"
-            src="/assets/linkedin.png"
-            alt="linkedin"
-          />
-        </IconButton>
-        <IconButton>
-          <Image
-            width="42"
-            height="42"
-            src="/assets/twitter.png"
-            alt="twitter"
-          />
-        </IconButton>
-        <IconButton>
-          <Image
-            width="42"
-            height="42"
-            src="/assets/telegram.png"
-            alt="telegram"
-          />
-        </IconButton>
-        <IconButton>
-          <Image width="42" height="42" src="/assets/email.png" alt="email" />
-        </IconButton>
+        <Link href="https://github.com/xyzuan">
+          <IconButton>
+            <Image
+              width="42"
+              height="42"
+              src="/assets/github.png"
+              alt="github"
+            />
+          </IconButton>
+        </Link>
+        <Link href="https://linkedin.com/in/xyzuan">
+          <IconButton>
+            <Image
+              width="42"
+              height="42"
+              src="/assets/linkedin.png"
+              alt="linkedin"
+            />
+          </IconButton>
+        </Link>
+        <Link href="https://twitter.com/xyzuannihboss">
+          <IconButton>
+            <Image
+              width="42"
+              height="42"
+              src="/assets/twitter.png"
+              alt="twitter"
+            />
+          </IconButton>
+        </Link>
+        <Link href="https://t.me/xyzuan">
+          <IconButton>
+            <Image
+              width="42"
+              height="42"
+              src="/assets/telegram.png"
+              alt="telegram"
+            />
+          </IconButton>
+        </Link>
+        <Link href="mailto:xyzuannihboss@gmail.com">
+          <IconButton>
+            <Image width="42" height="42" src="/assets/email.png" alt="email" />
+          </IconButton>
+        </Link>
       </Grid>
       <Typography
         sx={{

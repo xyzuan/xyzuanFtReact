@@ -1,20 +1,8 @@
-"use client";
-
 import { Container, Grid, Typography } from "@mui/material";
-import { useState } from "react";
+import HeadingItem from "./HeadingItem";
 
 const HeroTitle = () => {
-  const [isHeld, setIsHeld] = useState(false);
-
-  const handleTouchStart = () => {
-    setIsHeld(true);
-  };
-
-  const handleTouchEnd = () => {
-    setIsHeld(false);
-  };
-
-  const headings = [
+  const headings: string[] = [
     "c/c++",
     "flutter",
     "java",
@@ -38,26 +26,9 @@ const HeroTitle = () => {
         }}
       >
         {headings.map((heading, index) => (
-          <Typography
-            key={heading}
-            sx={{
-              fontSize: "64px",
-              fontFamily: "Laviossa",
-              whiteSpace: "nowrap",
-              userSelect: "none",
-              paddingLeft: index !== headings.length - 1 ? "20px" : 0,
-              transition: "0.3s ease",
-              color: isHeld ? "white" : "#A9A9A9",
-              "&:hover": {
-                fontSize: "68px",
-                color: "white",
-              },
-            }}
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-          >
-            {heading}
-          </Typography>
+          <Grid item key={heading}>
+            <HeadingItem heading={heading} />
+          </Grid>
         ))}
       </Grid>
       <Typography

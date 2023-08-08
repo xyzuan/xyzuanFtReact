@@ -7,6 +7,7 @@ function AboutDesc() {
       disableGutters
       sx={{
         padding: "24px",
+        paddingX: "32px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

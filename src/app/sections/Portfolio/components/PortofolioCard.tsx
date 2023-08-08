@@ -29,10 +29,23 @@ function PortofolioCard({ title, desc, img }: PortofolioCardProps) {
         title={title}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5">
+        <Typography
+          gutterBottom
+          variant="h5"
+          sx={{
+            userSelect: "none",
+          }}
+        >
           {title}
         </Typography>
-        <Typography variant="body2">{desc}</Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            userSelect: "none",
+          }}
+        >
+          {desc}
+        </Typography>
       </CardContent>
     </Card>
   );

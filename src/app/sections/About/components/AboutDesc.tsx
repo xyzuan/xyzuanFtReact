@@ -19,6 +19,7 @@ function AboutDesc() {
             fontFamily: "Laviossa",
             fontSize: "42px",
             paddingTop: "24px",
+            userSelect: "none",
           }}
         >
           Hi,
@@ -27,6 +28,7 @@ function AboutDesc() {
           sx={{
             fontSize: "14px",
             fontWeight: "100",
+            userSelect: "none",
           }}
         >
           I am an Android Developer and Mobile UI/UX Designer currently pursuing

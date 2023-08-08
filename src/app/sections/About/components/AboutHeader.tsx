@@ -26,6 +26,7 @@ function AboutHeader() {
             fontFamily: "Laviossa",
             fontSize: "19px",
             lineHeight: "21px",
+            userSelect: "none",
           }}
         >
           jody
@@ -38,6 +39,7 @@ function AboutHeader() {
             fontWeight: "100",
             lineHeight: "21px",
             textAlign: "right",
+            userSelect: "none",
           }}
         >
           xdroidOSS
@@ -85,6 +87,7 @@ function AboutHeader() {
               sx={{
                 fontFamily: "Laviossa",
                 fontSize: "48px",
+                userSelect: "none",
               }}
             >
               About me
@@ -94,6 +97,7 @@ function AboutHeader() {
                 sx={{
                   fontWeight: "100",
                   fontSize: "14px",
+                  userSelect: "none",
                 }}
               >
                 INDONESIA
@@ -111,6 +115,7 @@ function AboutHeader() {
                 sx={{
                   fontWeight: "100",
                   fontSize: "14px",
+                  userSelect: "none",
                 }}
               >
                 20 Y/O CANCER

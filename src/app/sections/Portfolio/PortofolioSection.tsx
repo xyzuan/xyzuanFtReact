@@ -14,6 +14,7 @@ function PortofolioSection() {
         style={{
           fontFamily: "Laviossa",
           fontSize: "48px",
+          userSelect: "none",
         }}
       >
         Portfolio
@@ -23,6 +24,7 @@ function PortofolioSection() {
           fontWeight: "100",
           fontSize: "14",
           paddingBottom: "24px",
+          userSelect: "none",
         }}
       >
         A collection of my past recent works. Feel free to take a look to get a

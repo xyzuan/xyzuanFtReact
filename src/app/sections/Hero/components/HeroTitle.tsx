@@ -31,6 +31,7 @@ const HeroTitle = () => {
               fontSize: "64px",
               fontFamily: "Laviossa",
               whiteSpace: "nowrap",
+              userSelect: "none",
               paddingLeft: index !== headings.length - 1 ? "20px" : 0, // Add right padding except for the last heading
               transition: "color 0.3s ease",
               "&:hover": {
@@ -49,6 +50,7 @@ const HeroTitle = () => {
           fontSize: "12px",
           fontWeight: "100",
           textAlign: "left",
+          userSelect: "none",
           "@media (min-width: 1024px)": {
             textAlign: "right",
             paddingRight: "24px",

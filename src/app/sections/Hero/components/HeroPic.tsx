@@ -31,6 +31,7 @@ const HeroPic = ({}) => {
               color: "#666666",
               paddingTop: "24px",
               paddingLeft: "24px",
+              userSelect: "none",
             }}
           >
             FRO

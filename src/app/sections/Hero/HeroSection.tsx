@@ -13,6 +13,7 @@ function HeroSection() {
         flexDirection: "column",
         "@media (min-width: 1024px)": {
           flexDirection: "row",
+          paddingY: "15vh",
         },
       }}
     >

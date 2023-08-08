@@ -10,6 +10,7 @@ const HeroPic = ({}) => {
           height: "400px",
           overflow: "hidden",
           position: "relative",
+          boxShadow: "none",
           backgroundColor: "#CDCBCB",
           backgroundImage: `url("/assets/HeroCardBG.png")`,
           "@media (min-width: 1024px)": {

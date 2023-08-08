@@ -15,6 +15,14 @@ function AboutHeader() {
     setIsHovered(false);
   };
 
+  const handleTouchStart = () => {
+    setIsHovered(true);
+  };
+
+  const handleTouchEnd = () => {
+    setIsHovered(false);
+  };
+
   const handleContextMenu = (e: any) => {
     e.preventDefault();
   };
@@ -93,6 +101,8 @@ function AboutHeader() {
             }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
           />
           <Box
             sx={{

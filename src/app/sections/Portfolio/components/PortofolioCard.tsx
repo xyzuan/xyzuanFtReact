@@ -16,7 +16,15 @@ function PortofolioCard({ title, desc, img }: PortofolioCardProps) {
       }}
     >
       <CardMedia
-        sx={{ height: 200, objectFit: "cover" }}
+        sx={{
+          height: 200,
+          objectFit: "cover",
+          filter: "grayscale(100%)",
+          transition: "filter 0.3s ease",
+          "&:hover": {
+            filter: "brightness(100%)",
+          },
+        }}
         image={img}
         title={title}
       />

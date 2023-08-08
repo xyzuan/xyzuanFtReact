@@ -97,7 +97,9 @@ function AboutHeader() {
               objectFit: "cover",
               transition: "0.3s ease",
               scale: isHovered ? "102%" : "100%",
-              filter: isHovered ? "grayscale(0%)" : "grayscale(100%)",
+              filter: isHovered
+                ? "grayscale(0%)"
+                : "grayscale(100%) brightness(65%)",
               zIndex: 2,
             }}
             onMouseEnter={handleMouseEnter}

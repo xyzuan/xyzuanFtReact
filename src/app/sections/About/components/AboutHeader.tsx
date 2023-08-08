@@ -1,10 +1,15 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
 function AboutHeader() {
   return (
-    <>
+    <Container
+      disableGutters
+      sx={{
+        maxWidth: "380px",
+      }}
+    >
       <Grid
         container
         direction="row"
@@ -94,7 +99,7 @@ function AboutHeader() {
           </Grid>
         </Box>
       </Box>
-    </>
+    </Container>
   );
 }
 

@@ -47,18 +47,23 @@ const HeroTitle = ({}) => {
         >
           design android
         </Typography>
+        <Typography
+          sx={{
+            padding: "36px",
+            paddingRight: "50px",
+            fontSize: "12px",
+            fontWeight: "100",
+            textAlign: "left",
+            "@media (min-width: 1024px)": {
+              textAlign: "right",
+              paddingRight: "8px",
+            },
+          }}
+        >
+          Words aren’t gonna cut it. Let’s scroll and have a peep into my world,
+          shall we?
+        </Typography>
       </Grid>
-      <Typography
-        sx={{
-          padding: "36px",
-          paddingRight: "50px",
-          fontSize: "12px",
-          fontWeight: "100",
-        }}
-      >
-        Words aren’t gonna cut it. Let’s scroll and have a peep into my world,
-        shall we?
-      </Typography>
     </>
   );
 };

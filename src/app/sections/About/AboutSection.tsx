@@ -9,6 +9,11 @@ function AboutSection() {
       id="about"
       sx={{
         backgroundColor: "#212121",
+        display: "flex",
+        flexDirection: "column",
+        "@media (min-width: 1024px)": {
+          flexDirection: "row",
+        },
       }}
     >
       <AboutHeader />

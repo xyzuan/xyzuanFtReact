@@ -1,5 +1,7 @@
+"use client";
+
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 
 interface PortofolioCardProps {
   title: string;
@@ -8,6 +10,16 @@ interface PortofolioCardProps {
 }
 
 function PortofolioCard({ title, desc, img }: PortofolioCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <Card
       sx={{
@@ -22,9 +34,11 @@ function PortofolioCard({ title, desc, img }: PortofolioCardProps) {
           filter: "grayscale(100%)",
           transition: "filter 0.3s ease",
           "&:hover": {
-            filter: "brightness(100%)",
+            filter: isHovered ? "grayscale(0%)" : "grayscale(100%)",
           },
         }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         image={img}
         title={title}
       />

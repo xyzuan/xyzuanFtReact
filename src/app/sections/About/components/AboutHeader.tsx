@@ -1,8 +1,24 @@
+"use client";
+
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 function AboutHeader() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleContextMenu = (e: any) => {
+    e.preventDefault();
+  };
+
   return (
     <Container
       disableGutters
@@ -62,16 +78,21 @@ function AboutHeader() {
             }}
           />
           <Image
-            src="/assets/HeroMe.png"
+            src="/assets/AboutPic.png"
             alt="Me"
-            width="100"
-            height="100"
+            width="1000"
+            height="0"
+            onContextMenu={handleContextMenu}
             style={{
-              width: "100%",
-              height: "100%",
+              width: "auto",
+              height: "auto",
               objectFit: "cover",
+              transition: "filter 0.3s ease",
+              filter: isHovered ? "grayscale(0%)" : "grayscale(100%)",
               zIndex: 2,
             }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           />
           <Box
             sx={{

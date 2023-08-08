@@ -41,7 +41,7 @@ const HeroPic = ({}) => {
             ND.
           </Typography>
           <Image
-            width="220"
+            width="1000"
             height="0"
             src="/assets/HeroMe.png"
             alt=""

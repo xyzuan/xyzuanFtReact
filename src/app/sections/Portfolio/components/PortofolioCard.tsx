@@ -26,19 +26,18 @@ function PortofolioCard({ title, desc, img }: PortofolioCardProps) {
         backgroundColor: "#212121",
         color: "#ffffff",
       }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <CardMedia
         sx={{
           height: 200,
           objectFit: "cover",
           filter: "grayscale(100%)",
-          transition: "filter 0.3s ease",
-          "&:hover": {
-            filter: isHovered ? "grayscale(0%)" : "grayscale(100%)",
-          },
+          transition: "0.3s ease",
+          scale: isHovered ? "105%" : "100%",
+          WebkitFilter: isHovered ? "grayscale(0%)" : "grayscale(100%)",
         }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
         image={img}
         title={title}
       />

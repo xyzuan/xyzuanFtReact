@@ -95,7 +95,8 @@ function AboutHeader() {
               width: "auto",
               height: "auto",
               objectFit: "cover",
-              transition: "filter 0.3s ease",
+              transition: "0.3s ease",
+              scale: isHovered ? "102%" : "100%",
               filter: isHovered ? "grayscale(0%)" : "grayscale(100%)",
               zIndex: 2,
             }}

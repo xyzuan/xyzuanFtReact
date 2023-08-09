@@ -54,6 +54,7 @@ const HeroPic = ({}) => {
               scale: mobile ? "100%" : "170%",
               right: 50,
               bottom: mobile ? 1 : -50,
+              animation: "rotate 2.9s ease-out infinite",
             }}
           />
           <Image

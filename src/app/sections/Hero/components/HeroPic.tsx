@@ -50,7 +50,7 @@ const HeroPic = ({}) => {
             style={{
               zIndex: 1,
               position: "absolute",
-
+              userSelect: "none",
               scale: mobile ? "100%" : "170%",
               right: 50,
               bottom: mobile ? 1 : -50,
@@ -65,6 +65,7 @@ const HeroPic = ({}) => {
               paddingTop: "24px",
               paddingLeft: "24px",
               zIndex: 2,
+              userSelect: "none",
             }}
           />
           <Image
@@ -75,6 +76,7 @@ const HeroPic = ({}) => {
             style={{
               position: "absolute",
               top: 0,
+              userSelect: "none",
               width: mobile ? "35vh" : "50vh",
               right: mobile ? 0 : -30,
               zIndex: 3,
@@ -88,6 +90,7 @@ const HeroPic = ({}) => {
             style={{
               zIndex: 1,
               position: "absolute",
+              userSelect: "none",
               scale: mobile ? "100%" : "130%",
               left: mobile ? 100 : 30,
               bottom: mobile ? -80 : -180,
@@ -103,6 +106,7 @@ const HeroPic = ({}) => {
         style={{
           zIndex: 1,
           position: "absolute",
+          userSelect: "none",
           scale: mobile ? "100%" : "150%",
           right: mobile ? 50 : 90,
           top: 0,

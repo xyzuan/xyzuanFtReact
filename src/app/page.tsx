@@ -23,6 +23,14 @@ export default function Home() {
     }, 2000);
   }, []);
 
+  useEffect(() => {
+    if (showPreloader) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [showPreloader]);
+
   return (
     <div className={`fade-animation ${contentVisible ? "hide-content" : ""}`}>
       {showPreloader && <Preloader />}

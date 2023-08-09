@@ -6,3 +6,17 @@
   background-color: #2e2e2e;
   color: white;
 }
+
+.fade-animation {
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,7 +1,20 @@
+"use client";
+
 import { Container, Grid, Typography } from "@mui/material";
 import HeadingItem from "./HeadingItem";
+import { useState } from "react";
 
 const HeroTitle = () => {
+  const [isHeld, setIsHeld] = useState(false);
+
+  const handleTouchStart = () => {
+    setIsHeld(true);
+  };
+
+  const handleTouchEnd = () => {
+    setIsHeld(false);
+  };
+
   const headings: string[] = [
     "c/c++",
     "flutter",
@@ -39,6 +52,7 @@ const HeroTitle = () => {
           fontWeight: "100",
           textAlign: "left",
           userSelect: "none",
+          transition: "0.3s ease",
           "@media (min-width: 1024px)": {
             textAlign: "right",
             paddingRight: "24px",

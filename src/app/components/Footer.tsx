@@ -10,47 +10,62 @@ function Footer() {
         padding: "24px",
       }}
     >
-      <Typography
-        sx={{
-          fontFamily: "Laviossa",
-          fontSize: "32px",
-          paddingY: "24px",
-        }}
-      >
-        &lt;/xyzuan.
-      </Typography>
+      <Link href="#" color="inherit" underline="none">
+        <Typography
+          sx={{
+            fontFamily: "Laviossa",
+            fontSize: "32px",
+            paddingY: "24px",
+          }}
+        >
+          &lt;/xyzuan.
+        </Typography>
+      </Link>
       <Grid>
-        <Link href="#" color="inherit" underline="none">
-          <Typography
-            sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}
-          >
-            HOME
-          </Typography>
-        </Link>
         <Link href="#about" color="inherit" underline="none">
           <Typography
-            sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}
+            sx={{
+              color: "#C1C1C1",
+              fontWeight: 100,
+              padding: "6px",
+              fontFamily: "Roboto Flex, sans-serif",
+            }}
           >
             ABOUT
           </Typography>
         </Link>
         <Link href="#timeline" color="inherit" underline="none">
           <Typography
-            sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}
+            sx={{
+              color: "#C1C1C1",
+              fontWeight: 100,
+              padding: "6px",
+              fontFamily: "Roboto Flex, sans-serif",
+            }}
           >
             TIMELINE
           </Typography>
         </Link>
         <Link href="#portofolio" color="inherit" underline="none">
           <Typography
-            sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}
+            sx={{
+              color: "#C1C1C1",
+              fontWeight: 100,
+              padding: "6px",
+              fontFamily: "Roboto Flex, sans-serif",
+            }}
           >
             PORTOFOLIO
           </Typography>
         </Link>
         <Link href="#contact" color="inherit" underline="none">
           <Typography
-            sx={{ color: "#C1C1C1", fontWeight: 100, padding: "6px" }}
+            sx={{
+              color: "#C1C1C1",
+              fontWeight: 100,
+              padding: "6px",
+              fontFamily: "Roboto Flex, sans-serif",
+            }}
           >
             CONTACT
           </Typography>
@@ -121,6 +136,7 @@ function Footer() {
           color: "#C1C1C1",
           fontWeight: "100",
           paddingX: "8px",
+          fontFamily: "Roboto Flex, sans-serif",
         }}
       >
         Designed with love by Jody Yuantoro

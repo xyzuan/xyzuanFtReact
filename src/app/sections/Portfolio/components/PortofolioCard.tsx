@@ -46,6 +46,7 @@ function PortofolioCard({ title, desc, img }: PortofolioCardProps) {
           gutterBottom
           variant="h5"
           sx={{
+            fontFamily: "Roboto Flex, sans-serif",
             userSelect: "none",
           }}
         >
@@ -54,6 +55,7 @@ function PortofolioCard({ title, desc, img }: PortofolioCardProps) {
         <Typography
           variant="body2"
           sx={{
+            fontFamily: "Roboto Flex, sans-serif",
             userSelect: "none",
           }}
         >

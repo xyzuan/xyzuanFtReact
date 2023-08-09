@@ -22,6 +22,7 @@ function ContactSection() {
         sx={{
           fontSize: "14px",
           fontWeight: "100",
+          fontFamily: "Roboto Flex, sans-serif",
         }}
       >
         If want to meet up for work, contact me directly or fill out the form

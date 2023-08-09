@@ -23,6 +23,7 @@ function PortofolioSection() {
         sx={{
           fontWeight: "100",
           fontSize: "14",
+          fontFamily: "Roboto Flex, sans-serif",
           paddingBottom: "24px",
           userSelect: "none",
         }}

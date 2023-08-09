@@ -28,6 +28,7 @@ function AboutDesc() {
           sx={{
             fontSize: "14px",
             fontWeight: "100",
+            fontFamily: "Roboto Flex, sans-serif",
             userSelect: "none",
           }}
         >

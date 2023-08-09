@@ -53,6 +53,7 @@ const HeroTitle = () => {
           textAlign: "left",
           userSelect: "none",
           transition: "0.3s ease",
+          fontFamily: "Roboto Flex, sans-serif",
           "@media (min-width: 1024px)": {
             textAlign: "right",
             paddingRight: "24px",

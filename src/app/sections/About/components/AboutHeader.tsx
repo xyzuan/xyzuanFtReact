@@ -64,6 +64,7 @@ function AboutHeader() {
             lineHeight: "21px",
             textAlign: "right",
             userSelect: "none",
+            fontFamily: "Roboto Flex, sans-serif",
           }}
         >
           xdroidOSS
@@ -132,6 +133,7 @@ function AboutHeader() {
                   fontWeight: "100",
                   fontSize: "14px",
                   userSelect: "none",
+                  fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
                 INDONESIA
@@ -150,6 +152,7 @@ function AboutHeader() {
                   fontWeight: "100",
                   fontSize: "14px",
                   userSelect: "none",
+                  fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
                 20 Y/O CANCER

@@ -59,6 +59,7 @@ function Header() {
             }}
           >
             <Image width="58" height="58" src="/assets/xyzuan.svg" alt="" />
+
             <Box sx={{ flexGrow: 1 }} />
             <IconButton onClick={toggleNavbar}>
               <Image
@@ -79,28 +80,47 @@ function Header() {
             }}
           >
             <Grid>
-              <Link href="#" color="inherit" underline="none">
-                <Typography sx={{ fontWeight: 100, padding: "6px" }}>
-                  HOME
-                </Typography>
-              </Link>
               <Link href="#about" color="inherit" underline="none">
-                <Typography sx={{ fontWeight: 100, padding: "6px" }}>
+                <Typography
+                  sx={{
+                    fontWeight: 100,
+                    padding: "6px",
+                    fontFamily: "Roboto Flex, sans-serif",
+                  }}
+                >
                   ABOUT
                 </Typography>
               </Link>
               <Link href="#timeline" color="inherit" underline="none">
-                <Typography sx={{ fontWeight: 100, padding: "6px" }}>
+                <Typography
+                  sx={{
+                    fontWeight: 100,
+                    padding: "6px",
+                    fontFamily: "Roboto Flex, sans-serif",
+                  }}
+                >
                   TIMELINE
                 </Typography>
               </Link>
               <Link href="#portofolio" color="inherit" underline="none">
-                <Typography sx={{ fontWeight: 100, padding: "6px" }}>
+                <Typography
+                  sx={{
+                    fontWeight: 100,
+                    padding: "6px",
+                    fontFamily: "Roboto Flex, sans-serif",
+                  }}
+                >
                   PORTOFOLIO
                 </Typography>
               </Link>
               <Link href="#contact" color="inherit" underline="none">
-                <Typography sx={{ fontWeight: 100, padding: "6px" }}>
+                <Typography
+                  sx={{
+                    fontWeight: 100,
+                    padding: "6px",
+                    fontFamily: "Roboto Flex, sans-serif",
+                  }}
+                >
                   CONTACT
                 </Typography>
               </Link>

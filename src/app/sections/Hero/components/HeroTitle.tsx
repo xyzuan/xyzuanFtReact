@@ -34,7 +34,7 @@ const HeroTitle = () => {
         justifyContent="flex-end"
         sx={{
           color: "#A9A9A9",
-          paddingRight: "18px",
+          paddingRight: "8px",
           paddingTop: "18px",
           overflow: "hidden",
         }}

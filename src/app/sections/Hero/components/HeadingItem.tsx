@@ -22,7 +22,7 @@ const HeadingItem: React.FC<HeadingItemProps> = ({ heading }) => {
     <Typography
       key={heading}
       sx={{
-        fontSize: isHeld ? "68px" : "64px",
+        fontSize: isHeld ? "42px" : "38px",
         fontFamily: "Laviossa",
         whiteSpace: "nowrap",
         userSelect: "none",
@@ -31,8 +31,15 @@ const HeadingItem: React.FC<HeadingItemProps> = ({ heading }) => {
         transition: "0.3s ease",
         color: isHeld ? "white" : "#A9A9A9",
         "&:hover": {
-          fontSize: "68px",
+          fontSize: "42px",
           color: "white",
+        },
+        "@media (min-width: 1024px)": {
+          fontSize: isHeld ? "68px" : "64px",
+          "&:hover": {
+            fontSize: "68px",
+            color: "white",
+          },
         },
       }}
       onTouchStart={handleTouchStart}

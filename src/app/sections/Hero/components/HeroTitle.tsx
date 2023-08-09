@@ -35,6 +35,7 @@ const HeroTitle = () => {
         sx={{
           color: "#A9A9A9",
           paddingRight: "18px",
+          paddingTop: "18px",
           overflow: "hidden",
         }}
       >

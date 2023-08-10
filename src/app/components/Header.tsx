@@ -77,6 +77,9 @@ function Header() {
               height="58"
               src={mobile ? "/assets/xyzuan.svg" : "/assets/xyzuanland.svg"}
               alt=""
+              style={{
+                width: "auto",
+              }}
             />
             <Box flexGrow={1} />
             <Grid
@@ -162,6 +165,7 @@ function Header() {
                 src="/assets/NavBurger.svg"
                 alt=""
                 style={{
+                  width: "auto",
                   visibility: mobile ? "visible" : "hidden",
                 }}
               />

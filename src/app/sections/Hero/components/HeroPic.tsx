@@ -38,8 +38,8 @@ const HeroPic = ({}) => {
             minWidth: "490px",
             maxWidth: "500px",
             minBlockSize: "360px",
-            minHeight: "45vh",
-            maxHeight: "50vh",
+            minHeight: "75%",
+            maxHeight: "80%",
           },
         }}
       >
@@ -93,6 +93,7 @@ const HeroPic = ({}) => {
             alt=""
             src="/assets/polygon.svg"
             style={{
+              width: "auto",
               zIndex: 1,
               position: "absolute",
               userSelect: "none",
@@ -122,6 +123,7 @@ const HeroPic = ({}) => {
           src="/assets/star.svg"
           style={{
             position: "relative",
+            width: "auto",
           }}
         />
       </div>

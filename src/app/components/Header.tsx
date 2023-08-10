@@ -49,17 +49,20 @@ function Header() {
         position="sticky"
         sx={{
           position: "sticky",
-          background: "#2e2e2e",
+          background: isSticky ? "rgba(46, 46, 46, 0.9)" : "#2e2e2e",
           color: "#fff",
           boxShadow: "none",
           minHeight: "80px",
-          borderBottom: isSticky ? "1px solid #666666" : "none",
-          transition: "border-color 0.3s ease-in-out, height 0.1s ease-in-out",
+          transition: "0.3s ease-in-out",
         }}
       >
         <Toolbar
           sx={{
+            height: "100px",
             padding: "24px",
+            scale: isSticky ? "98%" : "100%",
+            transition: "0.3s ease-in-out",
+            backdropFilter: "blur(24px)",
           }}
         >
           <Container

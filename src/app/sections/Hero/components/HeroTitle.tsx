@@ -1,29 +1,17 @@
-"use client";
-
 import { Container, Grid, Typography } from "@mui/material";
 import HeadingItem from "./HeadingItem";
-import { useState } from "react";
 
 const HeroTitle = () => {
-  const [isHeld, setIsHeld] = useState(false);
-
-  const handleTouchStart = () => {
-    setIsHeld(true);
-  };
-
-  const handleTouchEnd = () => {
-    setIsHeld(false);
-  };
-
   const headings: string[] = [
-    "c/c++",
+    "android",
     "flutter",
     "java",
     "ui/ux",
     "js",
     "next.js",
     "design",
-    "android",
+    "express",
+    "oop",
   ];
 
   return (

@@ -22,6 +22,7 @@ const HeroPic = ({}) => {
       style={{
         position: "relative",
         paddingRight: "24px",
+        paddingTop: mobile ? "24px" : "40px",
       }}
     >
       <Card
@@ -32,12 +33,13 @@ const HeroPic = ({}) => {
           position: "relative",
           boxShadow: "none",
           backgroundColor: "#CDCBCB",
-          backgroundImage: `url("/assets/HeroCardBG.png")`,
+          backgroundImage: `url("/assets/rect.svg")`,
           "@media (min-width: 1024px)": {
-            minWidth: "410px",
-            maxWidth: "420px",
+            minWidth: "490px",
+            maxWidth: "500px",
             minBlockSize: "360px",
-            maxHeight: "45vh",
+            minHeight: "45vh",
+            maxHeight: "50vh",
           },
         }}
       >
@@ -63,8 +65,9 @@ const HeroPic = ({}) => {
             alt=""
             src="/assets/frontend.svg"
             style={{
-              paddingTop: "24px",
-              paddingLeft: "24px",
+              paddingTop: mobile ? "24px" : "40px",
+              paddingLeft: mobile ? "24px" : "40px",
+              scale: mobile ? "100%" : "150%",
               zIndex: 2,
               userSelect: "none",
             }}
@@ -72,14 +75,15 @@ const HeroPic = ({}) => {
           <Image
             width="1000"
             height="0"
-            src="/assets/HeroMe.png"
+            src="/assets/xyzuanhero.png"
             alt=""
             style={{
               position: "absolute",
               top: 0,
               userSelect: "none",
-              width: mobile ? "35vh" : "50vh",
-              right: mobile ? 0 : -30,
+              width: mobile ? "80%" : "100%",
+              right: mobile ? 0 : -80,
+              filter: "grayscale(100%)",
               zIndex: 3,
             }}
           />
@@ -87,32 +91,40 @@ const HeroPic = ({}) => {
             width="50"
             height="50"
             alt=""
-            src="/assets/ellipse.svg"
+            src="/assets/polygon.svg"
             style={{
               zIndex: 1,
               position: "absolute",
               userSelect: "none",
               scale: mobile ? "100%" : "130%",
-              left: mobile ? 100 : 30,
+              left: 30,
               bottom: mobile ? -80 : -180,
+              animation: "rotate 3.5s ease-out infinite",
             }}
           />
         </Stack>
       </Card>
-      <Image
-        width="50"
-        height="50"
-        alt=""
-        src="/assets/ellipse.svg"
+      <div
         style={{
-          zIndex: 1,
           position: "absolute",
+          right: mobile ? "32px" : "90px",
+          top: mobile ? "8px" : "18px",
+          zIndex: 1,
+          animation: "rotate 3.7s ease-out infinite",
           userSelect: "none",
-          scale: mobile ? "100%" : "150%",
-          right: mobile ? 50 : 90,
-          top: 0,
+          scale: mobile ? "100%" : "120%",
         }}
-      />
+      >
+        <Image
+          width="90"
+          height="90"
+          alt=""
+          src="/assets/star.svg"
+          style={{
+            position: "relative",
+          }}
+        />
+      </div>
     </div>
   );
 };

@@ -26,7 +26,7 @@ const HeadingItem: React.FC<HeadingItemProps> = ({ heading }) => {
         fontFamily: "Laviossa",
         whiteSpace: "nowrap",
         userSelect: "none",
-        paddingLeft: "20px",
+        paddingLeft: "8px",
         paddingRight: "20px",
         transition: "0.3s ease",
         color: isHeld ? "white" : "#A9A9A9",

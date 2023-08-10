@@ -59,7 +59,6 @@ function Header() {
         <Toolbar
           sx={{
             height: "100px",
-            padding: "24px",
             scale: isSticky ? "98%" : "100%",
             transition: "0.3s ease-in-out",
             backdropFilter: "blur(24px)",
@@ -172,9 +171,10 @@ function Header() {
         {showNavbar && (
           <Container
             sx={{
-              backgroundColor: "#2e2e2e",
+              marginTop: "-1px",
               paddingLeft: "32px",
               paddingBottom: "24px",
+              backdropFilter: "blur(24px)",
             }}
           >
             <Grid>

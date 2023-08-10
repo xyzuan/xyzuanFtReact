@@ -70,13 +70,21 @@ function Header() {
               justifyContent: "space-between",
             }}
           >
-            <Image width="58" height="58" src="/assets/xyzuan.svg" alt="" />
+            <Image
+              width={mobile ? "58" : "142"}
+              height="58"
+              src={mobile ? "/assets/xyzuan.svg" : "/assets/xyzuanland.svg"}
+              alt=""
+            />
+            <Box flexGrow={1} />
             <Grid
               sx={{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
+                flexGrow: 1,
                 width: mobile ? 0 : "auto",
+                height: mobile ? 0 : "auto",
                 visibility: mobile ? "hidden" : "visible",
               }}
             >
@@ -125,9 +133,29 @@ function Header() {
                 </Typography>
               </Link>
             </Grid>
+            <Typography
+              sx={{
+                width: mobile ? "0" : "auto",
+                height: mobile ? "0" : "auto",
+                visibility: mobile ? "hidden" : "visible",
+                fontFamily: "Roboto Flex, sans-serif",
+                fontWeight: 100,
+                color: "#A5A5A5",
+                textAlign: "right",
+              }}
+            >
+              welcome
+              <br />~ UwU ~
+            </Typography>
+            <Typography
+              sx={{
+                fontWeight: 100,
+                color: "#A5A5A5",
+              }}
+            ></Typography>
             <IconButton onClick={toggleNavbar}>
               <Image
-                width="42"
+                width={mobile ? "42" : "0"}
                 height="52"
                 src="/assets/NavBurger.svg"
                 alt=""

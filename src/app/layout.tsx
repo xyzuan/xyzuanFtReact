@@ -1,5 +1,8 @@
+"use client";
 import "./globals.css";
 import "./fonts.css";
+import { useEffect } from "react";
+import ReactGA from "react-ga";
 
 const siteTitle = "Jody Yuantoro | Frontend Developer";
 const siteDesc =
@@ -12,6 +15,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  useEffect(() => {
+    ReactGA.initialize("G-7EY8NE0PSW");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <html lang="en">
       <head>

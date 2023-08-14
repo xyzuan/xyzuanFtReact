@@ -31,7 +31,7 @@ function Preloader() {
         <Image
           height="200"
           width="200"
-          alt="200"
+          alt="xyzuan"
           src="/assets/preloader.svg"
           style={{
             width: "auto",

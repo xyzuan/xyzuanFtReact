@@ -47,7 +47,7 @@ const HeroPic = ({}) => {
           <Image
             width="50"
             height="50"
-            alt=""
+            alt="pill"
             src="/assets/pill.svg"
             style={{
               zIndex: 1,
@@ -62,7 +62,7 @@ const HeroPic = ({}) => {
           <Image
             height="150"
             width="150"
-            alt=""
+            alt="frontend"
             src="/assets/frontend.svg"
             style={{
               paddingTop: mobile ? "24px" : "40px",
@@ -76,7 +76,7 @@ const HeroPic = ({}) => {
             width="1000"
             height="0"
             src="/assets/xyzuanhero.png"
-            alt=""
+            alt="xyzuan"
             style={{
               position: "absolute",
               top: 0,
@@ -90,7 +90,7 @@ const HeroPic = ({}) => {
           <Image
             width="50"
             height="50"
-            alt=""
+            alt="poly"
             src="/assets/polygon.svg"
             style={{
               width: "auto",
@@ -119,7 +119,7 @@ const HeroPic = ({}) => {
         <Image
           width="90"
           height="90"
-          alt=""
+          alt="star"
           src="/assets/star.svg"
           style={{
             position: "relative",

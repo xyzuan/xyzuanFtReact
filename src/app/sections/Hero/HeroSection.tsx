@@ -44,7 +44,7 @@ function HeroSection() {
         <Image
           height="1442"
           width="1442"
-          alt=""
+          alt="bghero"
           src="/assets/herobg.svg"
           style={{
             zIndex: -1,
@@ -57,7 +57,7 @@ function HeroSection() {
         <Image
           height="1442"
           width="1442"
-          alt=""
+          alt="bgherotop"
           src="/assets/herobgtop.svg"
           style={{
             position: "absolute",

@@ -76,7 +76,7 @@ function Header() {
               width={mobile ? "58" : "142"}
               height="58"
               src={mobile ? "/assets/xyzuan.svg" : "/assets/xyzuanland.svg"}
-              alt=""
+              alt="xyzuan"
               style={{
                 width: "auto",
               }}
@@ -163,7 +163,7 @@ function Header() {
                 width={mobile ? "42" : "0"}
                 height="52"
                 src="/assets/NavBurger.svg"
-                alt=""
+                alt="burger"
                 style={{
                   width: "auto",
                   visibility: mobile ? "visible" : "hidden",

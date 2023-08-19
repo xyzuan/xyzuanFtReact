@@ -1,7 +1,10 @@
 import { Container, Grid, Typography } from "@mui/material";
 import HeadingItem from "./HeadingItem";
+import { useTheme } from "next-themes";
+import { darkTheme, lightTheme } from "@/app/style/themes";
 
 const HeroTitle = () => {
+  const { resolvedTheme } = useTheme();
   const headings: string[] = [
     "android",
     "flutter",
@@ -21,7 +24,6 @@ const HeroTitle = () => {
         direction="row"
         justifyContent="flex-end"
         sx={{
-          color: "#A9A9A9",
           paddingRight: "8px",
           paddingTop: "18px",
           overflow: "hidden",
@@ -35,6 +37,7 @@ const HeroTitle = () => {
       </Grid>
       <Typography
         sx={{
+          color: resolvedTheme === "dark" ? "#FFFFFF" : "#000000",
           padding: "36px",
           paddingRight: "50px",
           fontSize: "12px",

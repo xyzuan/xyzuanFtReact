@@ -1,6 +1,6 @@
 "use client";
-import "./globals.css";
-import "./fonts.css";
+import "./style/globals.css";
+import "./style/fonts.css";
 import { useEffect } from "react";
 import ReactGA from "react-ga";
 

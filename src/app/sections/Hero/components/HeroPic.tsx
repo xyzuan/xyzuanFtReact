@@ -4,8 +4,10 @@ import { isMobile } from "@/app/utils/themes";
 import { Card, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 const HeroPic = ({}) => {
+  const { resolvedTheme } = useTheme();
   const [mobile, setMobile] = useState(false);
 
   const updateIsMobile = () => {
@@ -32,7 +34,7 @@ const HeroPic = ({}) => {
           overflow: "hidden",
           position: "relative",
           boxShadow: "none",
-          backgroundColor: "#CDCBCB",
+          backgroundColor: resolvedTheme === "dark" ? "#CDCBCB" : "#F4F4F4",
           backgroundImage: `url("/assets/rect.svg")`,
           "@media (min-width: 1024px)": {
             minWidth: "490px",
@@ -120,7 +122,11 @@ const HeroPic = ({}) => {
           width="90"
           height="90"
           alt="star"
-          src="/assets/star.svg"
+          src={
+            resolvedTheme === "dark"
+              ? "/assets/star.svg"
+              : "/assets/star-dark.svg"
+          }
           style={{
             position: "relative",
             width: "auto",

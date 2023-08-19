@@ -1,6 +1,8 @@
 import { Container, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import PortofolioCard from "./components/PortofolioCard";
+import { useTheme } from "next-themes";
+import { darkTheme, lightTheme } from "@/app/style/themes";
 
 interface PortfolioItem {
   _id: string;
@@ -11,6 +13,7 @@ interface PortfolioItem {
 }
 
 function PortofolioSection() {
+  const { resolvedTheme } = useTheme();
   const [portfolio, setPortfolio] = useState<PortfolioItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -41,6 +44,8 @@ function PortofolioSection() {
     <Container
       id="portofolio"
       style={{
+        backgroundColor: resolvedTheme === "dark" ? "#2e2e2e" : "#ffffff",
+        color: resolvedTheme === "dark" ? "#FFFFFF" : "#000000",
         padding: "34px",
       }}
     >

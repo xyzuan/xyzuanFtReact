@@ -1,12 +1,15 @@
 import { Container, Grid, IconButton, Link, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import { useTheme } from "next-themes";
 
 function Footer() {
+  const { resolvedTheme } = useTheme();
   return (
     <Container
       sx={{
-        backgroundColor: "#212121",
+        backgroundColor: resolvedTheme === "dark" ? "#212121" : "#FFFFFF",
+        color: resolvedTheme === "dark" ? "#FFFFFF" : "#000000",
         padding: "24px",
       }}
     >
@@ -25,7 +28,6 @@ function Footer() {
         <Link href="#about" color="inherit" underline="none">
           <Typography
             sx={{
-              color: "#C1C1C1",
               fontWeight: 100,
               padding: "6px",
               fontFamily: "Roboto Flex, sans-serif",
@@ -37,7 +39,6 @@ function Footer() {
         <Link href="#timeline" color="inherit" underline="none">
           <Typography
             sx={{
-              color: "#C1C1C1",
               fontWeight: 100,
               padding: "6px",
               fontFamily: "Roboto Flex, sans-serif",
@@ -49,7 +50,6 @@ function Footer() {
         <Link href="#portofolio" color="inherit" underline="none">
           <Typography
             sx={{
-              color: "#C1C1C1",
               fontWeight: 100,
               padding: "6px",
               fontFamily: "Roboto Flex, sans-serif",
@@ -61,7 +61,6 @@ function Footer() {
         <Link href="#contact" color="inherit" underline="none">
           <Typography
             sx={{
-              color: "#C1C1C1",
               fontWeight: 100,
               padding: "6px",
               fontFamily: "Roboto Flex, sans-serif",
@@ -90,7 +89,11 @@ function Footer() {
             <Image
               width="42"
               height="42"
-              src="/assets/github.png"
+              src={
+                resolvedTheme === "dark"
+                  ? "/assets/github.png"
+                  : "/assets/github-dark.png"
+              }
               alt="github"
             />
           </IconButton>
@@ -100,7 +103,11 @@ function Footer() {
             <Image
               width="42"
               height="42"
-              src="/assets/linkedin.png"
+              src={
+                resolvedTheme === "dark"
+                  ? "/assets/linkedin.png"
+                  : "/assets/linkedin-dark.png"
+              }
               alt="linkedin"
             />
           </IconButton>
@@ -110,7 +117,11 @@ function Footer() {
             <Image
               width="42"
               height="42"
-              src="/assets/twitter.png"
+              src={
+                resolvedTheme === "dark"
+                  ? "/assets/twitter.png"
+                  : "/assets/twitter-dark.png"
+              }
               alt="twitter"
             />
           </IconButton>
@@ -120,20 +131,32 @@ function Footer() {
             <Image
               width="42"
               height="42"
-              src="/assets/telegram.png"
+              src={
+                resolvedTheme === "dark"
+                  ? "/assets/telegram.png"
+                  : "/assets/telegram-dark.png"
+              }
               alt="telegram"
             />
           </IconButton>
         </Link>
         <Link href="mailto:xyzuannihboss@gmail.com">
           <IconButton>
-            <Image width="42" height="42" src="/assets/email.png" alt="email" />
+            <Image
+              width="42"
+              height="42"
+              src={
+                resolvedTheme === "dark"
+                  ? "/assets/email.png"
+                  : "/assets/email-dark.png"
+              }
+              alt="email"
+            />
           </IconButton>
         </Link>
       </Grid>
       <Typography
         sx={{
-          color: "#C1C1C1",
           fontWeight: "100",
           paddingX: "8px",
           fontFamily: "Roboto Flex, sans-serif",

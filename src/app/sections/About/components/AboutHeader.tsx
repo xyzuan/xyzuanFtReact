@@ -3,8 +3,10 @@
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
+import { useTheme } from "next-themes";
 
 function AboutHeader() {
+  const { resolvedTheme } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -79,7 +81,7 @@ function AboutHeader() {
               position: "absolute",
               width: "160%",
               height: "160%",
-              backgroundColor: "#444444",
+              backgroundColor: resolvedTheme === "dark" ? "#444444" : "#B8B8B8",
               borderRadius: "50%",
               left: "-15%",
               bottom: "-80%",
@@ -123,6 +125,7 @@ function AboutHeader() {
                 fontFamily: "Laviossa",
                 fontSize: "48px",
                 userSelect: "none",
+                color: "white",
               }}
             >
               About me
@@ -134,6 +137,7 @@ function AboutHeader() {
                   fontSize: "14px",
                   userSelect: "none",
                   fontFamily: "Roboto Flex, sans-serif",
+                  color: "white",
                 }}
               >
                 INDONESIA
@@ -153,6 +157,7 @@ function AboutHeader() {
                   fontSize: "14px",
                   userSelect: "none",
                   fontFamily: "Roboto Flex, sans-serif",
+                  color: "white",
                 }}
               >
                 20 Y/O CANCER

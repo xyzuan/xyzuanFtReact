@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import React, { useState } from "react";
+import { useTheme } from "next-themes";
 
 interface PortofolioCardProps {
   title: string;
@@ -11,6 +12,7 @@ interface PortofolioCardProps {
 }
 
 function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
+  const { resolvedTheme } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -30,8 +32,9 @@ function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
   return (
     <Card
       sx={{
-        backgroundColor: "#212121",
-        color: "#ffffff",
+        boxShadow: "none",
+        backgroundColor: resolvedTheme === "dark" ? "#212121" : "#F4F4F4",
+        color: resolvedTheme === "dark" ? "#ffffff" : "#000000",
       }}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}

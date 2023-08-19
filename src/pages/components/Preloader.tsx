@@ -1,7 +1,7 @@
 import { Container, Grid, LinearProgress } from "@mui/material";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import BorderLinearProgress from "./BorderLinearProgress";
+// import BorderLinearProgress from "./BorderLinearProgress";
 
 function Preloader() {
   const [progress, setProgress] = useState(10);
@@ -37,13 +37,13 @@ function Preloader() {
             width: "auto",
           }}
         />
-        <BorderLinearProgress
+        {/* <BorderLinearProgress
           variant="determinate"
           value={progress}
           sx={{
             marginTop: "58px",
           }}
-        />
+        /> */}
       </Grid>
     </Container>
   );

@@ -1,9 +1,10 @@
 import Header from "@/pages/components/Header";
 import Footer from "@/pages/components/Footer";
+
+import Preloader from "./components/Preloader";
 import HeroSection from "./sections/Hero/HeroSection";
 import AboutSection from "./sections/About/AboutSection";
 import PortofolioSection from "./sections/Portfolio/PortofolioSection";
-import ContactSection from "./sections/Contact/ContactSection";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
   return (
     <>
       <div className={`fade-animation ${contentVisible ? "hide-content" : ""}`}>
-        {/* {showPreloader && <Preloader />} */}
+        {showPreloader && <Preloader />}
         <div
           style={{
             opacity: contentVisible ? 1 : 0,

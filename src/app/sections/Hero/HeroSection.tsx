@@ -3,7 +3,7 @@ import HeroPic from "./components/HeroPic";
 import HeroTitle from "./components/HeroTitle";
 import { Box, Container, Stack } from "@mui/material";
 import Image from "next/image";
-import { isMobile } from "@/utils/themes";
+import { isMobile } from "@/app/utils/themes";
 
 function HeroSection() {
   const [mobile, setMobile] = useState(false);

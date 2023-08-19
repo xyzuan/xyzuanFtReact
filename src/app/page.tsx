@@ -1,11 +1,13 @@
-import Header from "@/pages/components/Header";
-import Footer from "@/pages/components/Footer";
+"use client";
 
-import Preloader from "./components/Preloader";
+import Header from "./components/Header";
 import HeroSection from "./sections/Hero/HeroSection";
 import AboutSection from "./sections/About/AboutSection";
+import Footer from "./components/Footer";
 import PortofolioSection from "./sections/Portfolio/PortofolioSection";
+import ContactSection from "./sections/Contact/ContactSection";
 import { useEffect, useState } from "react";
+import Preloader from "./components/Preloader";
 
 export default function Home() {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -43,7 +45,7 @@ export default function Home() {
           <AboutSection />
           <PortofolioSection />
           {/* <TimelineSection /> */}
-          {/* <ContactSection /> */}
+          <ContactSection />
           <Footer />
         </div>
       </div>

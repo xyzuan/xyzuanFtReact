@@ -1,4 +1,6 @@
-import { isMobile } from "@/utils/themes";
+"use client";
+
+import { isMobile } from "@/app/utils/themes";
 import { Card, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";

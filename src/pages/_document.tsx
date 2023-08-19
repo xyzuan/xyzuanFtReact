@@ -1,8 +1,4 @@
-"use client";
-import "./globals.css";
-import "./fonts.css";
-import { useEffect } from "react";
-import ReactGA from "react-ga";
+import { Html, Head, Main, NextScript } from "next/document";
 
 const siteTitle = "Jody Yuantoro | Frontend Developer";
 const siteDesc =
@@ -10,22 +6,11 @@ const siteDesc =
 const siteKey =
   "Jody Yuantoro, Frontend Developer, Mobile UI/UX Designer, Android Developer, Malang, Responsive Web Design, User Experience, Web Development, optimized user experiences, Malang-based";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  useEffect(() => {
-    ReactGA.initialize("G-7EY8NE0PSW");
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
+export default function Document() {
   return (
-    <html lang="en">
-      <head>
+    <Html lang="en">
+      <Head>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{siteTitle}</title>
         <meta property="title" content={siteTitle} />
         <meta property="og:title" content={siteTitle} />
         <meta name="description" content={siteDesc} />
@@ -39,8 +24,11 @@ export default function RootLayout({
         <meta property="og:url" content="https://xyzuan.my.id/" />
         <meta property="og:site_name" content={siteTitle} />
         <meta property="og:type" content="website" />
-      </head>
-      <body>{children}</body>
-    </html>
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
   );
 }

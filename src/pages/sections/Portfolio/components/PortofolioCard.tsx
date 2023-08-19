@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import React, { useState } from "react";
 
@@ -7,9 +5,10 @@ interface PortofolioCardProps {
   title: string;
   desc: string;
   img: string;
+  href: string;
 }
 
-function PortofolioCard({ title, desc, img }: PortofolioCardProps) {
+function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -20,12 +19,19 @@ function PortofolioCard({ title, desc, img }: PortofolioCardProps) {
     setIsHovered(false);
   };
 
+  const handleClick = () => {
+    if (href) {
+      window.location.href = href;
+    }
+  };
+
   return (
     <Card
       sx={{
         backgroundColor: "#212121",
         color: "#ffffff",
       }}
+      onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

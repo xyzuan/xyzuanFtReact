@@ -1,13 +1,10 @@
-"use client";
-
-import Header from "./components/Header";
+import Header from "@/pages/components/Header";
+import Footer from "@/pages/components/Footer";
 import HeroSection from "./sections/Hero/HeroSection";
 import AboutSection from "./sections/About/AboutSection";
-import Footer from "./components/Footer";
 import PortofolioSection from "./sections/Portfolio/PortofolioSection";
 import ContactSection from "./sections/Contact/ContactSection";
 import { useEffect, useState } from "react";
-import Preloader from "./components/Preloader";
 
 export default function Home() {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -33,7 +30,7 @@ export default function Home() {
   return (
     <>
       <div className={`fade-animation ${contentVisible ? "hide-content" : ""}`}>
-        {showPreloader && <Preloader />}
+        {/* {showPreloader && <Preloader />} */}
         <div
           style={{
             opacity: contentVisible ? 1 : 0,
@@ -45,7 +42,7 @@ export default function Home() {
           <AboutSection />
           <PortofolioSection />
           {/* <TimelineSection /> */}
-          <ContactSection />
+          {/* <ContactSection /> */}
           <Footer />
         </div>
       </div>

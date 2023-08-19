@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import {
   AppBar,
@@ -13,7 +11,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { isMobile } from "../utils/themes";
+import { isMobile } from "../../utils/themes";
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false);

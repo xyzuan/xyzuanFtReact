@@ -1,7 +1,20 @@
+"use client";
+import { isMobile } from "@/app/utils/themes";
 import { Container, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function AboutDesc() {
+  const [mobile, setMobile] = useState(false);
+
+  const updateIsMobile = () => {
+    setMobile(isMobile());
+  };
+
+  useEffect(() => {
+    updateIsMobile();
+    window.addEventListener("resize", updateIsMobile);
+  }, []);
+
   return (
     <Container
       disableGutters
@@ -41,6 +54,16 @@ function AboutDesc() {
           continuous learning and staying updated with industry trends, I bring
           a combination of technical expertise, design proficiency, and a strong
           educational foundation to my work.
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "Prestige",
+            fontSize: "6rem",
+            textAlign: "right",
+            paddingRight: mobile ? 0 : "32px",
+          }}
+        >
+          xyzuan
         </Typography>
       </Grid>
     </Container>

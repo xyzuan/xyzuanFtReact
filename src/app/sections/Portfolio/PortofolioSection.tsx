@@ -17,7 +17,15 @@ function PortofolioSection() {
 
   useEffect(() => {
     const apiUrl = "https://api.xyzuan.my.id/portfolio";
-    fetch(apiUrl)
+    const headers = new Headers();
+    headers.set(
+      "Authorization",
+      "Basic " + btoa(process.env.API_USERNAME + ":" + process.env.API_PASSWORD)
+    );
+    fetch(apiUrl, {
+      method: "GET",
+      headers: headers,
+    })
       .then((response) => response.json())
       .then((data) => {
         setPortfolio(data);

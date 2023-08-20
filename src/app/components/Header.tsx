@@ -151,16 +151,17 @@ function Header() {
             </Link>
           </Grid>
           <ThemeToggle />
-          <Typography
+          <IconButton
+            onClick={toggleNavbar}
             sx={{
-              fontWeight: 100,
-              color: "#A5A5A5",
+              width: mobile ? "42" : "0",
+              height: mobile ? "52" : "0",
+              visibility: mobile ? "visible" : "hidden",
             }}
-          ></Typography>
-          <IconButton onClick={toggleNavbar}>
+          >
             <Image
               width={mobile ? "42" : "0"}
-              height="52"
+              height={mobile ? "52" : "0"}
               src={
                 resolvedTheme === "dark"
                   ? "/assets/NavBurger.svg"
@@ -169,7 +170,6 @@ function Header() {
               alt="burger"
               style={{
                 width: "auto",
-                visibility: mobile ? "visible" : "hidden",
               }}
             />
           </IconButton>

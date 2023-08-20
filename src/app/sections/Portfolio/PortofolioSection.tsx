@@ -47,6 +47,7 @@ function PortofolioSection() {
         backgroundColor: resolvedTheme === "dark" ? "#2e2e2e" : "#ffffff",
         color: resolvedTheme === "dark" ? "#FFFFFF" : "#000000",
         padding: "34px",
+        transition: "0.3s ease-in-out",
       }}
     >
       <Typography

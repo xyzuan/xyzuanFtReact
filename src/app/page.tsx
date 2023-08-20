@@ -45,7 +45,6 @@ export default function Home() {
           <ThemeProvider attribute="class">
             <div
               style={{
-                transition: "0.3s ease-in-out",
                 backgroundColor:
                   resolvedTheme === "dark" ? "#2e2e2e" : "#FFFFFF",
               }}

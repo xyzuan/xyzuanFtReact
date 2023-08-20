@@ -86,6 +86,7 @@ function AboutHeader() {
               left: "-15%",
               bottom: "-80%",
               zIndex: 1,
+              transition: "0.3s ease-in-out",
             }}
           />
           <Image

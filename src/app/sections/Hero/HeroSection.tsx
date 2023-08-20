@@ -29,6 +29,7 @@ function HeroSection() {
         flex: 1,
         flexDirection: "column",
         overflow: "hidden",
+        transition: "0.3s ease-in-out",
         "@media (min-width: 1024px)": {
           flexDirection: "row",
           paddingY: "15vh",

@@ -27,6 +27,7 @@ const HeroTitle = () => {
           paddingRight: "8px",
           paddingTop: "18px",
           overflow: "hidden",
+          transition: "0.3s ease-in-out",
         }}
       >
         {headings.map((heading, index) => (

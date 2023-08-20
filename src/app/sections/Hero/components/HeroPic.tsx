@@ -36,6 +36,7 @@ const HeroPic = ({}) => {
           boxShadow: "none",
           backgroundColor: resolvedTheme === "dark" ? "#CDCBCB" : "#F4F4F4",
           backgroundImage: `url("/assets/rect.svg")`,
+          transition: "0.3s ease-in-out",
           "@media (min-width: 1024px)": {
             minWidth: "490px",
             maxWidth: "500px",
@@ -130,6 +131,7 @@ const HeroPic = ({}) => {
           style={{
             position: "relative",
             width: "auto",
+            transition: "0.3s ease-in-out",
           }}
         />
       </div>

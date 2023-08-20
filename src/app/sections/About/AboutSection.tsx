@@ -15,6 +15,7 @@ function AboutSection() {
         color: resolvedTheme === "dark" ? "#ffffff" : "#000000",
         display: "flex",
         flexDirection: "column",
+        transition: "0.3s ease-in-out",
         "@media (min-width: 1024px)": {
           flexDirection: "row",
         },

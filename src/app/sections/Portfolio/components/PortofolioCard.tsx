@@ -35,6 +35,7 @@ function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
         boxShadow: "none",
         backgroundColor: resolvedTheme === "dark" ? "#212121" : "#F4F4F4",
         color: resolvedTheme === "dark" ? "#ffffff" : "#000000",
+        transition: "0.3s ease-in-out",
       }}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}

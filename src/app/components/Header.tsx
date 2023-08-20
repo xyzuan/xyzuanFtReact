@@ -109,7 +109,7 @@ function Header() {
               <Typography
                 sx={{
                   fontWeight: 100,
-                  padding: "6px",
+                  padding: "12px",
                   fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
@@ -120,7 +120,7 @@ function Header() {
               <Typography
                 sx={{
                   fontWeight: 100,
-                  padding: "6px",
+                  padding: "12px",
                   fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
@@ -131,7 +131,7 @@ function Header() {
               <Typography
                 sx={{
                   fontWeight: 100,
-                  padding: "6px",
+                  padding: "12px",
                   fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
@@ -142,7 +142,7 @@ function Header() {
               <Typography
                 sx={{
                   fontWeight: 100,
-                  padding: "6px",
+                  padding: "12px",
                   fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
@@ -189,7 +189,7 @@ function Header() {
               <Typography
                 sx={{
                   fontWeight: 100,
-                  padding: "6px",
+                  padding: "12px",
                   fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
@@ -200,7 +200,7 @@ function Header() {
               <Typography
                 sx={{
                   fontWeight: 100,
-                  padding: "6px",
+                  padding: "12px",
                   fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
@@ -211,7 +211,7 @@ function Header() {
               <Typography
                 sx={{
                   fontWeight: 100,
-                  padding: "6px",
+                  padding: "12px",
                   fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
@@ -222,7 +222,7 @@ function Header() {
               <Typography
                 sx={{
                   fontWeight: 100,
-                  padding: "6px",
+                  padding: "12px",
                   fontFamily: "Roboto Flex, sans-serif",
                 }}
               >

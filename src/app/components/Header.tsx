@@ -63,8 +63,6 @@ function Header() {
       <Toolbar
         sx={{
           height: "100px",
-          scale: isSticky ? "98%" : "100%",
-          transition: "0.3s ease-in-out",
           backdropFilter: "blur(24px)",
         }}
       >
@@ -74,6 +72,8 @@ function Header() {
             flexDirection: "row",
             alignItems: "center",
             overflow: "hidden",
+            scale: isSticky ? "98%" : "100%",
+            transition: "0.3s ease-in-out",
           }}
         >
           <Image

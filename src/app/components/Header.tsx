@@ -50,9 +50,7 @@ function Header() {
       sx={{
         position: "sticky",
         background:
-          resolvedTheme === "dark"
-            ? "rgba(46, 46, 46, 0.9)"
-            : "rgba(255, 255, 255, 0.7)",
+          resolvedTheme === "dark" ? "#121212" : "rgba(255, 255, 255, 0.7)",
         color: resolvedTheme === "dark" ? "#ffffff" : "#000000",
         boxShadow: "none",
         minHeight: "80px",

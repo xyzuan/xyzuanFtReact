@@ -1,18 +1,33 @@
 import { IconButton } from "@mui/material";
 import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const ThemeToggle = () => {
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const { resolvedTheme } = useTheme();
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme !== null) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
   return (
-    <IconButton onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+    <IconButton onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
       <Image
         width="42"
         height="52"
         src={
-          resolvedTheme === "dark"
+          theme === "dark"
             ? "/assets/theme-light.png"
             : "/assets/theme-dark.png"
         }

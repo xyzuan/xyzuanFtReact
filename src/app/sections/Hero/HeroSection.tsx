@@ -4,9 +4,11 @@ import HeroTitle from "./components/HeroTitle";
 import { Box, Container, Stack } from "@mui/material";
 import Image from "next/image";
 import { isMobile } from "@/app/utils/themes";
+import { useTheme } from "next-themes";
 
 function HeroSection() {
   const [mobile, setMobile] = useState(false);
+  const { resolvedTheme } = useTheme();
 
   const updateIsMobile = () => {
     setMobile(isMobile());
@@ -46,7 +48,11 @@ function HeroSection() {
           height="1442"
           width="1442"
           alt="bghero"
-          src="/assets/herobg.svg"
+          src={
+            resolvedTheme === "dark"
+              ? "/assets/herobg.svg"
+              : "/assets/herobg-dark.svg"
+          }
           style={{
             zIndex: -1,
             position: "absolute",
@@ -59,7 +65,11 @@ function HeroSection() {
           height="1442"
           width="1442"
           alt="bgherotop"
-          src="/assets/herobgtop.svg"
+          src={
+            resolvedTheme === "dark"
+              ? "/assets/herobgtop.svg"
+              : "/assets/herobgtop-dark.svg"
+          }
           style={{
             position: "absolute",
             animation: "rotate 6s linear infinite",

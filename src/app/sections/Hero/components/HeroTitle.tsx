@@ -1,7 +1,6 @@
 import { Container, Grid, Typography } from "@mui/material";
 import HeadingItem from "./HeadingItem";
 import { useTheme } from "next-themes";
-import { darkTheme, lightTheme } from "@/app/style/themes";
 
 const HeroTitle = () => {
   const { resolvedTheme } = useTheme();

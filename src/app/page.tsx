@@ -8,12 +8,10 @@ import AboutSection from "./sections/About/AboutSection";
 import PortofolioSection from "./sections/Portfolio/PortofolioSection";
 
 import { useEffect, useState } from "react";
-import { useTheme, ThemeProvider } from "next-themes";
 
 export default function Home() {
   const [showPreloader, setShowPreloader] = useState(true);
   const [contentVisible, setContentVisible] = useState(false);
-  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setTimeout(() => {
@@ -42,20 +40,11 @@ export default function Home() {
             transition: "opacity 0.3s ease-in-out",
           }}
         >
-          <ThemeProvider attribute="class">
-            <div
-              style={{
-                backgroundColor:
-                  resolvedTheme === "dark" ? "#2e2e2e" : "#FFFFFF",
-              }}
-            >
-              <Header />
-              <HeroSection />
-              <AboutSection />
-              <PortofolioSection />
-              <Footer />
-            </div>
-          </ThemeProvider>
+          <Header />
+          <HeroSection />
+          <AboutSection />
+          <PortofolioSection />
+          <Footer />
         </div>
       </div>
     </>

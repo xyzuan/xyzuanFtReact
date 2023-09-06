@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { useTheme } from "next-themes";
@@ -32,7 +30,8 @@ function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
   return (
     <Card
       sx={{
-        boxShadow: "none",
+        boxShadow: isHovered ? "0 0 50px rgba(128, 128, 128, 0.5)" : "none",
+        borderRadius: "32px",
         backgroundColor: resolvedTheme === "dark" ? "#212121" : "#F4F4F4",
         color: resolvedTheme === "dark" ? "#ffffff" : "#000000",
         transition: "0.3s ease-in-out",
@@ -60,6 +59,7 @@ function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
           sx={{
             fontFamily: "Roboto Flex, sans-serif",
             userSelect: "none",
+            paddingLeft: "8px",
           }}
         >
           {title}
@@ -69,6 +69,7 @@ function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
           sx={{
             fontFamily: "Roboto Flex, sans-serif",
             userSelect: "none",
+            paddingLeft: "8px",
           }}
         >
           {desc}

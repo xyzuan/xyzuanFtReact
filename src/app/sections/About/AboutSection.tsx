@@ -11,6 +11,7 @@ function AboutSection() {
       disableGutters
       id="about"
       sx={{
+        borderRadius: "32px",
         backgroundColor: resolvedTheme === "dark" ? "#212121" : "#F4F4F4",
         color: resolvedTheme === "dark" ? "#ffffff" : "#000000",
         display: "flex",

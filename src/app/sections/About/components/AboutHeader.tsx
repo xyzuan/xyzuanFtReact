@@ -1,5 +1,3 @@
-"use client";
-
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -74,7 +72,10 @@ function AboutHeader() {
           UI UX, Developer
         </Typography>
       </Grid>
-      <Box position="relative" sx={{ overflow: "hidden" }}>
+      <Box
+        position="relative"
+        sx={{ overflow: "hidden", borderRadius: "32px" }}
+      >
         <Stack>
           <Box
             sx={{

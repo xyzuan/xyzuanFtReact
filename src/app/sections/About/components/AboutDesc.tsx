@@ -1,4 +1,3 @@
-"use client";
 import { isMobile } from "@/app/utils/themes";
 import { Container, Grid, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";

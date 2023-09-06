@@ -4,11 +4,8 @@ import HeroTitle from "./components/HeroTitle";
 import { Box, Container, Stack } from "@mui/material";
 import Image from "next/image";
 import { isMobile } from "@/app/utils/themes";
-import { useTheme } from "next-themes";
-import { darkTheme, lightTheme } from "@/app/style/themes";
 
 function HeroSection() {
-  const { resolvedTheme } = useTheme();
   const [mobile, setMobile] = useState(false);
 
   const updateIsMobile = () => {
@@ -23,7 +20,6 @@ function HeroSection() {
   return (
     <Container
       disableGutters
-      style={resolvedTheme === "dark" ? darkTheme : lightTheme}
       sx={{
         display: "flex",
         flex: 1,

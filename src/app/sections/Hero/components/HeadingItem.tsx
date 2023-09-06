@@ -1,9 +1,6 @@
-"use client";
-
 import { Typography } from "@mui/material";
 import React, { useState } from "react";
 import { useTheme } from "next-themes";
-import { darkTheme, lightTheme } from "@/app/style/themes";
 
 interface HeadingItemProps {
   heading: string;

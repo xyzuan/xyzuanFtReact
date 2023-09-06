@@ -2,7 +2,6 @@ import { Container, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import PortofolioCard from "./components/PortofolioCard";
 import { useTheme } from "next-themes";
-import { darkTheme, lightTheme } from "@/app/style/themes";
 
 interface PortfolioItem {
   _id: string;

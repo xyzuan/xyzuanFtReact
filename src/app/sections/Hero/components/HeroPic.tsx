@@ -1,7 +1,5 @@
-"use client";
-
 import { isMobile } from "@/app/utils/themes";
-import { Card, Grid, Stack, Typography } from "@mui/material";
+import { Card, Stack } from "@mui/material";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
@@ -29,7 +27,9 @@ const HeroPic = ({}) => {
     >
       <Card
         sx={{
-          borderRadius: "0 999px 999px 0px",
+          borderRadius: mobile
+            ? "0 999px 999px 0px"
+            : "300px 999px 999px 300px",
           height: "260px",
           overflow: "hidden",
           position: "relative",

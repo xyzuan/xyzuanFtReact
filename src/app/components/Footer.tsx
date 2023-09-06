@@ -8,7 +8,6 @@ function Footer() {
   return (
     <Container
       sx={{
-        backgroundColor: resolvedTheme === "dark" ? "#212121" : "#FFFFFF",
         color: resolvedTheme === "dark" ? "#FFFFFF" : "#000000",
         padding: "24px",
         transition: "0.3s ease-in-out",

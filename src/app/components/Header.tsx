@@ -169,7 +169,7 @@ function Header() {
               }
               alt="burger"
               style={{
-                width: "auto",
+                width: "52",
               }}
             />
           </IconButton>

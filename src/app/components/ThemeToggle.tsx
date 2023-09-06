@@ -18,7 +18,7 @@ const ThemeToggle = () => {
         }
         alt="theme"
         style={{
-          width: "auto",
+          width: "52",
         }}
       />
     </IconButton>

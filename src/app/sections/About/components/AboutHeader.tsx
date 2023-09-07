@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useTheme } from "next-themes";
 
 function AboutHeader() {
-  const { resolvedTheme } = useTheme();
+  const { theme } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -82,7 +82,7 @@ function AboutHeader() {
               position: "absolute",
               width: "160%",
               height: "160%",
-              backgroundColor: resolvedTheme === "dark" ? "#444444" : "#B8B8B8",
+              backgroundColor: theme === "dark" ? "#444444" : "#B8B8B8",
               borderRadius: "50%",
               left: "-15%",
               bottom: "-80%",

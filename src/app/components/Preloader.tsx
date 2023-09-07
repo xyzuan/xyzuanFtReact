@@ -2,9 +2,11 @@ import { Container, Grid, LinearProgress } from "@mui/material";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import BorderLinearProgress from "./BorderLinearProgress";
+import { useTheme } from "next-themes";
 
 function Preloader() {
   const [progress, setProgress] = useState(10);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -32,7 +34,11 @@ function Preloader() {
           height="200"
           width="200"
           alt="xyzuan"
-          src="/assets/preloader.svg"
+          src={
+            theme === "dark"
+              ? "/assets/preloader.svg"
+              : "/assets/preloader-dark.svg"
+          }
           style={{
             width: "auto",
           }}

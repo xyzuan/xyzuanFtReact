@@ -7,7 +7,7 @@ interface HeadingItemProps {
 }
 
 const HeadingItem: React.FC<HeadingItemProps> = ({ heading }) => {
-  const { resolvedTheme } = useTheme();
+  const { theme } = useTheme();
   const [isHeld, setIsHeld] = useState(false);
 
   const handleTouchStart = () => {
@@ -30,21 +30,21 @@ const HeadingItem: React.FC<HeadingItemProps> = ({ heading }) => {
         paddingRight: "20px",
         transition: "0.3s ease",
         color: isHeld
-          ? resolvedTheme === "dark"
+          ? theme === "dark"
             ? "white"
             : "black"
-          : resolvedTheme === "dark"
+          : theme === "dark"
           ? "#A9A9A9"
           : "#A9A9A9",
         "&:hover": {
           fontSize: "42px",
-          color: resolvedTheme === "dark" ? "#FFFFFF" : "#000000",
+          color: theme === "dark" ? "#FFFFFF" : "#000000",
         },
         "@media (min-width: 1024px)": {
           fontSize: isHeld ? "68px" : "64px",
           "&:hover": {
             fontSize: "68px",
-            color: resolvedTheme === "dark" ? "#FFFFFF" : "#000000",
+            color: theme === "dark" ? "#FFFFFF" : "#000000",
           },
         },
       }}

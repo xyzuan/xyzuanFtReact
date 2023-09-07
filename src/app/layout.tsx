@@ -3,8 +3,8 @@ import "./style/globals.css";
 import "./style/fonts.css";
 import { useEffect } from "react";
 import ReactGA from "react-ga";
-import { ThemeProvider } from "./utils/theme-provider";
-import { useTheme } from "next-themes";
+import { ThemeProvider, useTheme } from "next-themes";
+import { Provider } from "./utils/provider";
 
 const siteTitle = "Jody Yuantoro | Frontend Developer";
 const siteDesc =
@@ -22,21 +22,6 @@ export default function RootLayout({
   useEffect(() => {
     ReactGA.initialize("G-7EY8NE0PSW");
     ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-  }, []);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme !== null) {
-      // Check for null explicitly
-      setTheme(savedTheme);
-    }
   }, []);
 
   return (
@@ -60,9 +45,7 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
       </head>
       <body className={`duration-200`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <main>{children}</main>
-        </ThemeProvider>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

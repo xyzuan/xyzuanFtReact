@@ -3,6 +3,7 @@ import LinearProgress, {
   linearProgressClasses,
   LinearProgressProps,
 } from "@mui/material/LinearProgress";
+import { useTheme } from "next-themes";
 
 interface StyledBorderLinearProgressProps extends LinearProgressProps {
   value: number;
@@ -10,16 +11,22 @@ interface StyledBorderLinearProgressProps extends LinearProgressProps {
 
 const BorderLinearProgress = styled(
   LinearProgress
-)<StyledBorderLinearProgressProps>(({ theme, value }) => ({
-  height: 8,
-  borderRadius: 99,
-  [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: "#212121",
-  },
-  [`& .${linearProgressClasses.bar}`]: {
+)<StyledBorderLinearProgressProps>(({ value }) => {
+  const { theme } = useTheme();
+
+  const backgroundColor = theme === "dark" ? "#212121" : "lightGray";
+  const barColor = theme === "dark" ? "#000000" : "#FFFFFF";
+  return {
+    height: 8,
     borderRadius: 99,
-    backgroundColor: "white",
-  },
-}));
+    [`&.${linearProgressClasses.colorPrimary}`]: {
+      backgroundColor,
+    },
+    [`& .${linearProgressClasses.bar}`]: {
+      borderRadius: 99,
+      backgroundColor: barColor,
+    },
+  };
+});
 
 export default BorderLinearProgress;

@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 
 function HeroSection() {
   const [mobile, setMobile] = useState(false);
-  const { resolvedTheme } = useTheme();
+  const { theme } = useTheme();
 
   const updateIsMobile = () => {
     setMobile(isMobile());
@@ -49,9 +49,7 @@ function HeroSection() {
           width="1442"
           alt="bghero"
           src={
-            resolvedTheme === "dark"
-              ? "/assets/herobg.svg"
-              : "/assets/herobg-dark.svg"
+            theme === "dark" ? "/assets/herobg.svg" : "/assets/herobg-dark.svg"
           }
           style={{
             zIndex: -1,
@@ -66,7 +64,7 @@ function HeroSection() {
           width="1442"
           alt="bgherotop"
           src={
-            resolvedTheme === "dark"
+            theme === "dark"
               ? "/assets/herobgtop.svg"
               : "/assets/herobgtop-dark.svg"
           }

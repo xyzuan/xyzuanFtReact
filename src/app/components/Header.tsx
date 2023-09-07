@@ -16,7 +16,7 @@ import { useTheme } from "next-themes";
 import ThemeToggle from "./ThemeToggle";
 
 function Header() {
-  const { resolvedTheme } = useTheme();
+  const { theme } = useTheme();
   const [isSticky, setIsSticky] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
   const [mobile, setMobile] = useState(false);
@@ -49,9 +49,8 @@ function Header() {
       position="sticky"
       sx={{
         position: "sticky",
-        background:
-          resolvedTheme === "dark" ? "#121212" : "rgba(255, 255, 255, 0.7)",
-        color: resolvedTheme === "dark" ? "#ffffff" : "#000000",
+        background: theme === "dark" ? "#121212" : "rgba(255, 255, 255, 0.7)",
+        color: theme === "dark" ? "#ffffff" : "#000000",
         boxShadow: "none",
         minHeight: "80px",
       }}
@@ -77,10 +76,10 @@ function Header() {
             height="58"
             src={
               mobile
-                ? resolvedTheme === "dark"
+                ? theme === "dark"
                   ? "/assets/xyzuan.svg"
                   : "/assets/xyzuan-dark.svg"
-                : resolvedTheme === "dark"
+                : theme === "dark"
                 ? "/assets/xyzuanland.svg"
                 : "/assets/xyzuanland-dark.svg"
             }
@@ -159,7 +158,7 @@ function Header() {
               width={mobile ? "42" : "0"}
               height={mobile ? "52" : "0"}
               src={
-                resolvedTheme === "dark"
+                theme === "dark"
                   ? "/assets/NavBurger.svg"
                   : "/assets/NavBurger-dark.svg"
               }

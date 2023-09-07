@@ -10,7 +10,7 @@ interface PortofolioCardProps {
 }
 
 function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
-  const { resolvedTheme } = useTheme();
+  const { theme } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -32,8 +32,8 @@ function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
       sx={{
         boxShadow: isHovered ? "0 0 50px rgba(128, 128, 128, 0.5)" : "none",
         borderRadius: "32px",
-        backgroundColor: resolvedTheme === "dark" ? "#212121" : "#F4F4F4",
-        color: resolvedTheme === "dark" ? "#ffffff" : "#000000",
+        backgroundColor: theme === "dark" ? "#212121" : "#F4F4F4",
+        color: theme === "dark" ? "#ffffff" : "#000000",
         transition: "0.1s ease-in-out",
       }}
       onClick={handleClick}

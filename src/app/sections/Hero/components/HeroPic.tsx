@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
 const HeroPic = ({}) => {
-  const { resolvedTheme } = useTheme();
+  const { theme } = useTheme();
   const [mobile, setMobile] = useState(false);
 
   const updateIsMobile = () => {
@@ -34,7 +34,7 @@ const HeroPic = ({}) => {
           overflow: "hidden",
           position: "relative",
           boxShadow: "none",
-          backgroundColor: resolvedTheme === "dark" ? "#CDCBCB" : "#F4F4F4",
+          backgroundColor: theme === "dark" ? "#CDCBCB" : "#F4F4F4",
           backgroundImage: `url("/assets/rect.svg")`,
           transition: "0.3s ease-in-out",
           "@media (min-width: 1024px)": {
@@ -123,11 +123,7 @@ const HeroPic = ({}) => {
           width="90"
           height="90"
           alt="star"
-          src={
-            resolvedTheme === "dark"
-              ? "/assets/star.svg"
-              : "/assets/star-dark.svg"
-          }
+          src={theme === "dark" ? "/assets/star.svg" : "/assets/star-dark.svg"}
           style={{
             position: "relative",
             width: "auto",

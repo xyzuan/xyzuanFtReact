@@ -4,11 +4,11 @@ import React from "react";
 import { useTheme } from "next-themes";
 
 function Footer() {
-  const { resolvedTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <Container
       sx={{
-        color: resolvedTheme === "dark" ? "#FFFFFF" : "#000000",
+        color: theme === "dark" ? "#FFFFFF" : "#000000",
         padding: "24px",
         transition: "0.3s ease-in-out",
       }}
@@ -90,7 +90,7 @@ function Footer() {
               width="42"
               height="42"
               src={
-                resolvedTheme === "dark"
+                theme === "dark"
                   ? "/assets/github.png"
                   : "/assets/github-dark.png"
               }
@@ -104,7 +104,7 @@ function Footer() {
               width="42"
               height="42"
               src={
-                resolvedTheme === "dark"
+                theme === "dark"
                   ? "/assets/linkedin.png"
                   : "/assets/linkedin-dark.png"
               }
@@ -118,7 +118,7 @@ function Footer() {
               width="42"
               height="42"
               src={
-                resolvedTheme === "dark"
+                theme === "dark"
                   ? "/assets/twitter.png"
                   : "/assets/twitter-dark.png"
               }
@@ -132,7 +132,7 @@ function Footer() {
               width="42"
               height="42"
               src={
-                resolvedTheme === "dark"
+                theme === "dark"
                   ? "/assets/telegram.png"
                   : "/assets/telegram-dark.png"
               }
@@ -146,7 +146,7 @@ function Footer() {
               width="42"
               height="42"
               src={
-                resolvedTheme === "dark"
+                theme === "dark"
                   ? "/assets/email.png"
                   : "/assets/email-dark.png"
               }

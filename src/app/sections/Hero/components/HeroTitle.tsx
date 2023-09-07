@@ -3,7 +3,7 @@ import HeadingItem from "./HeadingItem";
 import { useTheme } from "next-themes";
 
 const HeroTitle = () => {
-  const { resolvedTheme } = useTheme();
+  const { theme } = useTheme();
   const headings: string[] = [
     "android",
     "flutter",
@@ -37,7 +37,7 @@ const HeroTitle = () => {
       </Grid>
       <Typography
         sx={{
-          color: resolvedTheme === "dark" ? "#FFFFFF" : "#000000",
+          color: theme === "dark" ? "#FFFFFF" : "#000000",
           padding: "36px",
           paddingRight: "50px",
           fontSize: "12px",

@@ -8,6 +8,7 @@ import AboutSection from "./sections/About/AboutSection";
 import PortofolioSection from "./sections/Portfolio/PortofolioSection";
 
 import { useEffect, useState } from "react";
+import { ThemeProvider } from "next-themes";
 
 export default function Home() {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -31,7 +32,7 @@ export default function Home() {
   }, [showPreloader]);
 
   return (
-    <>
+    <ThemeProvider attribute="class" defaultTheme="light">
       <div className={`fade-animation ${contentVisible ? "hide-content" : ""}`}>
         {showPreloader && <Preloader />}
         <div
@@ -47,6 +48,6 @@ export default function Home() {
           <Footer />
         </div>
       </div>
-    </>
+    </ThemeProvider>
   );
 }

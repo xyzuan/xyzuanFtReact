@@ -12,7 +12,7 @@ interface PortfolioItem {
 }
 
 function PortofolioSection() {
-  const { resolvedTheme } = useTheme();
+  const { theme } = useTheme();
   const [portfolio, setPortfolio] = useState<PortfolioItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -43,7 +43,7 @@ function PortofolioSection() {
     <Container
       id="portofolio"
       style={{
-        color: resolvedTheme === "dark" ? "#FFFFFF" : "#000000",
+        color: theme === "dark" ? "#FFFFFF" : "#000000",
         padding: "34px",
         transition: "0.3s ease-in-out",
       }}

@@ -9,6 +9,7 @@ import PortofolioSection from "./sections/Portfolio/PortofolioSection";
 
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "next-themes";
+import TimelineSection from "./sections/Timeline/TimelineSection";
 
 export default function Home() {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -44,6 +45,7 @@ export default function Home() {
           <Header />
           <HeroSection />
           <AboutSection />
+          <TimelineSection />
           <PortofolioSection />
           <Footer />
         </div>

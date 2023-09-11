@@ -11,24 +11,15 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { isMobile } from "../utils/themes";
 import { useTheme } from "next-themes";
 import ThemeToggle from "./ThemeToggle";
+import useResponsive from "@/app/hooks/useResponsive";
 
 function Header() {
   const { theme } = useTheme();
+  const isMobile = useResponsive("down", "lg");
   const [isSticky, setIsSticky] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
-  const [mobile, setMobile] = useState(false);
-
-  const updateIsMobile = () => {
-    setMobile(isMobile());
-  };
-
-  useEffect(() => {
-    updateIsMobile();
-    window.addEventListener("resize", updateIsMobile);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,10 +63,10 @@ function Header() {
           }}
         >
           <Image
-            width={mobile ? "58" : "142"}
+            width={isMobile ? "58" : "142"}
             height="58"
             src={
-              mobile
+              isMobile
                 ? theme === "dark"
                   ? "/assets/xyzuan.svg"
                   : "/assets/xyzuan-dark.svg"
@@ -95,9 +86,9 @@ function Header() {
               flexDirection: "row",
               alignItems: "center",
               flexGrow: 1,
-              width: mobile ? 0 : "auto",
-              height: mobile ? 0 : "auto",
-              visibility: mobile ? "hidden" : "visible",
+              width: isMobile ? 0 : "auto",
+              height: isMobile ? 0 : "auto",
+              visibility: isMobile ? "hidden" : "visible",
             }}
           >
             <Link href="#about" color="inherit" underline="none">
@@ -149,14 +140,14 @@ function Header() {
           <IconButton
             onClick={toggleNavbar}
             sx={{
-              width: mobile ? "42" : "0",
-              height: mobile ? "52" : "0",
-              visibility: mobile ? "visible" : "hidden",
+              width: isMobile ? "42" : "0",
+              height: isMobile ? "52" : "0",
+              visibility: isMobile ? "visible" : "hidden",
             }}
           >
             <Image
-              width={mobile ? "42" : "0"}
-              height={mobile ? "52" : "0"}
+              width={isMobile ? "42" : "0"}
+              height={isMobile ? "52" : "0"}
               src={
                 theme === "dark"
                   ? "/assets/NavBurger.svg"

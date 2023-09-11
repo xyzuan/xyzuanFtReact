@@ -1,18 +1,9 @@
-import { isMobile } from "@/app/utils/themes";
-import { Container, Grid, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
+import { Container, Grid, Typography } from "@mui/material";
+import useResponsive from "@/app/hooks/useResponsive";
 
 function AboutDesc() {
-  const [mobile, setMobile] = useState(false);
-
-  const updateIsMobile = () => {
-    setMobile(isMobile());
-  };
-
-  useEffect(() => {
-    updateIsMobile();
-    window.addEventListener("resize", updateIsMobile);
-  }, []);
+  const isMobile = useResponsive("down", "lg");
 
   return (
     <Container
@@ -46,8 +37,8 @@ function AboutDesc() {
         >
           I am an Android Developer and Mobile UI/UX Designer currently pursuing
           a major in Informatics Engineering at the University of Muhammadiyah
-          Malang. With a passion for creating innovative mobile applications, I
-          possess strong skills in Java programming languages, along with
+          Malang. With a passion for creating innovative isMobile applications,
+          I possess strong skills in Java programming languages, along with
           proficiency in Android Development. My design background enables me to
           develop visually appealing and user-friendly interfaces. Committed to
           continuous learning and staying updated with industry trends, I bring
@@ -59,7 +50,7 @@ function AboutDesc() {
             fontFamily: "Prestige",
             fontSize: "6rem",
             textAlign: "right",
-            paddingRight: mobile ? 0 : "32px",
+            paddingRight: isMobile ? 0 : "32px",
           }}
         >
           xyzuan

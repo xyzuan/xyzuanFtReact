@@ -3,21 +3,12 @@ import HeroPic from "./components/HeroPic";
 import HeroTitle from "./components/HeroTitle";
 import { Box, Container, Stack } from "@mui/material";
 import Image from "next/image";
-import { isMobile } from "@/app/utils/themes";
 import { useTheme } from "next-themes";
+import useResponsive from "@/app/hooks/useResponsive";
 
 function HeroSection() {
-  const [mobile, setMobile] = useState(false);
   const { theme } = useTheme();
-
-  const updateIsMobile = () => {
-    setMobile(isMobile());
-  };
-
-  useEffect(() => {
-    updateIsMobile();
-    window.addEventListener("resize", updateIsMobile);
-  }, []);
+  const isMobile = useResponsive("down", "lg");
 
   return (
     <Container
@@ -55,8 +46,8 @@ function HeroSection() {
             zIndex: -1,
             position: "absolute",
             animation: "rotate 6s linear infinite",
-            top: mobile ? "380px" : 0,
-            right: mobile ? "-180px" : "-600px",
+            top: isMobile ? "380px" : 0,
+            right: isMobile ? "-180px" : "-600px",
           }}
         />
         <Image
@@ -72,8 +63,8 @@ function HeroSection() {
             position: "absolute",
             animation: "rotate 6s linear infinite",
             zIndex: -1,
-            bottom: mobile ? "160px" : 100,
-            left: mobile ? "-180px" : "-600px",
+            bottom: isMobile ? "160px" : 100,
+            left: isMobile ? "-180px" : "-600px",
           }}
         />
         <HeroPic />

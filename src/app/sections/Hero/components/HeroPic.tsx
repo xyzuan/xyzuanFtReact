@@ -1,33 +1,24 @@
-import { isMobile } from "@/app/utils/themes";
 import { Card, Stack } from "@mui/material";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import useResponsive from "@/app/hooks/useResponsive";
 
 const HeroPic = ({}) => {
   const { theme } = useTheme();
-  const [mobile, setMobile] = useState(false);
-
-  const updateIsMobile = () => {
-    setMobile(isMobile());
-  };
-
-  useEffect(() => {
-    updateIsMobile();
-    window.addEventListener("resize", updateIsMobile);
-  }, []);
+  const isMobile = useResponsive("down", "lg");
 
   return (
     <div
       style={{
         position: "relative",
         paddingRight: "24px",
-        paddingTop: mobile ? "24px" : "40px",
+        paddingTop: isMobile ? "24px" : "40px",
       }}
     >
       <Card
         sx={{
-          borderRadius: mobile
+          borderRadius: isMobile
             ? "0 999px 999px 0px"
             : "300px 999px 999px 300px",
           height: "260px",
@@ -56,9 +47,9 @@ const HeroPic = ({}) => {
               zIndex: 1,
               position: "absolute",
               userSelect: "none",
-              scale: mobile ? "100%" : "170%",
+              scale: isMobile ? "100%" : "170%",
               right: 50,
-              bottom: mobile ? 1 : -50,
+              bottom: isMobile ? 1 : -50,
               animation: "rotate 2.9s ease-out infinite",
             }}
           />
@@ -68,9 +59,9 @@ const HeroPic = ({}) => {
             alt="frontend"
             src="/assets/frontend.svg"
             style={{
-              paddingTop: mobile ? "24px" : "40px",
-              paddingLeft: mobile ? "24px" : "40px",
-              scale: mobile ? "100%" : "150%",
+              paddingTop: isMobile ? "24px" : "40px",
+              paddingLeft: isMobile ? "24px" : "40px",
+              scale: isMobile ? "100%" : "150%",
               zIndex: 2,
               userSelect: "none",
             }}
@@ -84,8 +75,8 @@ const HeroPic = ({}) => {
               position: "absolute",
               top: 0,
               userSelect: "none",
-              width: mobile ? "80%" : "100%",
-              right: mobile ? 0 : -80,
+              width: isMobile ? "80%" : "100%",
+              right: isMobile ? 0 : -80,
               filter: "grayscale(100%)",
               zIndex: 3,
             }}
@@ -100,9 +91,9 @@ const HeroPic = ({}) => {
               zIndex: 1,
               position: "absolute",
               userSelect: "none",
-              scale: mobile ? "100%" : "130%",
+              scale: isMobile ? "100%" : "130%",
               left: 30,
-              bottom: mobile ? -80 : -180,
+              bottom: isMobile ? -80 : -180,
               animation: "rotate 3.5s ease-out infinite",
             }}
           />
@@ -111,12 +102,12 @@ const HeroPic = ({}) => {
       <div
         style={{
           position: "absolute",
-          right: mobile ? "32px" : "90px",
-          top: mobile ? "8px" : "18px",
+          right: isMobile ? "32px" : "90px",
+          top: isMobile ? "8px" : "18px",
           zIndex: 1,
           animation: "rotate 3.7s ease-out infinite",
           userSelect: "none",
-          scale: mobile ? "100%" : "120%",
+          scale: isMobile ? "100%" : "120%",
         }}
       >
         <Image

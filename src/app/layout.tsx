@@ -4,7 +4,6 @@ import "./style/fonts.css";
 import { useEffect } from "react";
 import ReactGA from "react-ga";
 import { ThemeProvider, useTheme } from "next-themes";
-import { Provider } from "./utils/provider";
 
 const siteTitle = "Jody Yuantoro | Frontend Developer";
 const siteDesc =
@@ -45,7 +44,7 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
       </head>
       <body className={`duration-200`}>
-        <Provider>{children}</Provider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

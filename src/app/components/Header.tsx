@@ -13,7 +13,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import ThemeToggle from "./ThemeToggle";
-import useResponsive from "@/app/hooks/useResponsive";
+import useResponsive from "@/app/utils/useResponsive";
 import { manrope } from "../constant/fonts";
 
 function Header() {

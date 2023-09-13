@@ -3,7 +3,7 @@ import { Typography, Box, Stack, Card, Grid, Link } from "@mui/material";
 import { manrope } from "@/app/constant/fonts";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import useResponsive from "@/app/hooks/useResponsive";
+import useResponsive from "@/app/utils/useResponsive";
 
 interface WorkCardProps {
   logo: string;

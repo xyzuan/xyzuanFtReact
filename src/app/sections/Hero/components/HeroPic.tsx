@@ -2,7 +2,7 @@ import { Card, Stack } from "@mui/material";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import useResponsive from "@/app/hooks/useResponsive";
+import useResponsive from "@/app/utils/useResponsive";
 
 const HeroPic = ({}) => {
   const { theme } = useTheme();

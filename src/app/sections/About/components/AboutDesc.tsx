@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Grid, Typography } from "@mui/material";
-import useResponsive from "@/app/hooks/useResponsive";
+import useResponsive from "@/app/utils/useResponsive";
 import { manrope } from "@/app/constant/fonts";
 
 function AboutDesc() {

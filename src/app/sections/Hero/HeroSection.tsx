@@ -4,7 +4,7 @@ import HeroTitle from "./components/HeroTitle";
 import { Box, Container, Stack } from "@mui/material";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import useResponsive from "@/app/hooks/useResponsive";
+import useResponsive from "@/app/utils/useResponsive";
 
 function HeroSection() {
   const { theme } = useTheme();

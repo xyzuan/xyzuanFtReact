@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container, Grid, Link, Typography } from "@mui/material";
 import { manrope } from "@/app/constant/fonts";
-import useResponsive from "@/app/hooks/useResponsive";
+import useResponsive from "@/app/utils/useResponsive";
 import WorkCard from "./components/WorkCard";
 import EducationTime from "./components/EducationTime";
 import { useTheme } from "next-themes";
@@ -32,6 +32,7 @@ function CareerSection() {
 
   const workData = [
     {
+      _id: "01",
       logo: "/assets/infinite.svg",
       jobTitle: "Web Developer Mentee",
       instance: "Infinite Learning Indonesia",
@@ -40,6 +41,7 @@ function CareerSection() {
       date: "Aug 2023 - Present",
     },
     {
+      _id: "02",
       logo: "/assets/labit.svg",
       jobTitle: "System Information",
       instance: "Informatics Laboratory UMM",
@@ -56,6 +58,7 @@ function CareerSection() {
       date: "Jul 2022 - Present",
     },
     {
+      _id: "03",
       logo: "/assets/lingkup.svg",
       jobTitle: "AOSP Developer",
       instance: "PT Lingkup Total Technology",
@@ -64,6 +67,7 @@ function CareerSection() {
       date: "Feb 2022 - Dec 2022",
     },
     {
+      _id: "04",
       logo: "/assets/xd.svg",
       jobTitle: "AOSP Developer",
       instance: "xdroidOSS",
@@ -193,7 +197,7 @@ function CareerSection() {
           </Typography>
           <Grid container spacing="24px" sx={{ paddingTop: "24px" }}>
             {workData.map((item) => (
-              <Grid item xs={12} sm={6}>
+              <Grid key={item._id} item xs={12} sm={6}>
                 <WorkCard
                   logo={item.logo}
                   jobTitle={item.jobTitle}

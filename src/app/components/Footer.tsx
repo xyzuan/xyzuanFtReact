@@ -159,7 +159,6 @@ function Footer() {
       <Typography
         className={`${manrope.className}`}
         sx={{
-          fontWeight: "medium",
           paddingX: "8px",
         }}
       >

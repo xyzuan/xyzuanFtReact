@@ -1,4 +1,10 @@
 "use client";
+import { useEffect, useState } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import Preloader from "./components/Preloader";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -6,9 +12,6 @@ import HeroSection from "./sections/Hero/HeroSection";
 import AboutSection from "./sections/About/AboutSection";
 import PortofolioSection from "./sections/Portfolio/PortofolioSection";
 import TimelineSection from "./sections/Timeline/TimelineSection";
-import { useEffect, useMemo, useState } from "react";
-import Preloader from "./components/Preloader";
-import { manrope } from "./constant/fonts";
 
 export default function Home() {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -30,6 +33,12 @@ export default function Home() {
       document.body.style.overflow = "";
     }
   }, [showPreloader]);
+
+  useEffect(() => {
+    AOS.init({
+      offset: 0,
+    });
+  }, []);
 
   return (
     <div className={`fade-animation ${contentVisible ? "hide-content" : ""}`}>

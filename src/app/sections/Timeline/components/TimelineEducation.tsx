@@ -8,11 +8,11 @@ interface TimelineEvent {
   summary: string;
 }
 
-interface TimelineComponentProps {
+interface TimelineEducationProps {
   events: TimelineEvent[];
 }
 
-const TimelineComponent: React.FC<TimelineComponentProps> = ({ events }) => {
+const TimelineEducation: React.FC<TimelineEducationProps> = ({ events }) => {
   const { theme } = useTheme();
 
   return (
@@ -82,4 +82,4 @@ const TimelineComponent: React.FC<TimelineComponentProps> = ({ events }) => {
   );
 };
 
-export default TimelineComponent;
+export default TimelineEducation;

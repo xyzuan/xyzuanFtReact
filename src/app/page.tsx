@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 import HeroSection from "./sections/Hero/HeroSection";
 import AboutSection from "./sections/About/AboutSection";
 import PortofolioSection from "./sections/Portfolio/PortofolioSection";
-import TimelineSection from "./sections/Timeline/TimelineSection";
+import CareerSection from "./sections/Career/CareerSection";
 
 export default function Home() {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -52,7 +52,7 @@ export default function Home() {
         <Header />
         <HeroSection />
         <AboutSection />
-        <TimelineSection />
+        <CareerSection />
         <PortofolioSection />
         <Footer />
       </div>

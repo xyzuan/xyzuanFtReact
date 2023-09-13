@@ -1,12 +1,23 @@
-import React from "react";
-import { Container, Grid, Typography } from "@mui/material";
+import { useState } from "react";
+import { Container, Grid, Link, Typography } from "@mui/material";
 import { manrope } from "@/app/constant/fonts";
-import TimelineEducation from "./components/TimelineEducation";
-import TimelineWork from "./components/TimelineWork";
 import useResponsive from "@/app/hooks/useResponsive";
+import WorkCard from "./components/WorkCard";
+import EducationTime from "./components/EducationTime";
+import { useTheme } from "next-themes";
 
-function TimelineSection() {
+function CareerSection() {
   const isMobile = useResponsive("down", "lg");
+  const { theme } = useTheme();
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   const educationData = [
     {
@@ -65,7 +76,7 @@ function TimelineSection() {
   return (
     <Container
       disableGutters
-      id="timeline"
+      id="career"
       sx={{
         paddingTop: "32px",
         paddingX: "34px",
@@ -78,8 +89,70 @@ function TimelineSection() {
           userSelect: "none",
         }}
       >
-        Timeline
+        Career
       </Typography>
+
+      <Typography
+        className={`${manrope.className}`}
+        sx={{
+          fontSize: "14",
+          fontSmooth: "always",
+          userSelect: "none",
+          paddingBottom: "8px",
+        }}
+      >
+        My professional career journey.
+      </Typography>
+
+      <Link
+        href="/assets/Jody Yuantoro_ATS_CV.pdf"
+        color="inherit"
+        underline="none"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <Grid
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+          }}
+        >
+          <svg
+            stroke={isHovered ? (theme === "dark" ? "white" : "black") : "gray"}
+            fill="none"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{
+              marginTop: "4px",
+              transition: "0.2s ease",
+            }}
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" x2="12" y1="15" y2="3"></line>
+          </svg>
+          <Typography
+            className={`${manrope.className}`}
+            sx={{
+              color: isHovered ? "current" : "gray",
+              fontWeight: isHovered ? "medium" : "",
+              fontSize: "14",
+              fontSmooth: "always",
+              userSelect: "none",
+              paddingBottom: "18px",
+              paddingLeft: "12px",
+              transition: "0.2s ease",
+            }}
+          >
+            Download Resume
+          </Typography>
+        </Grid>
+      </Link>
 
       <Grid
         sx={{
@@ -87,7 +160,12 @@ function TimelineSection() {
           flexDirection: isMobile ? "column" : "row",
         }}
       >
-        <Container disableGutters>
+        <Container
+          disableGutters
+          sx={{
+            paddingBottom: "18px",
+          }}
+        >
           <Typography
             className={`${manrope.className}`}
             sx={{
@@ -99,7 +177,7 @@ function TimelineSection() {
           >
             Education History
           </Typography>
-          <TimelineEducation events={educationData} />
+          <EducationTime events={educationData} />
         </Container>
         <Grid>
           <Typography
@@ -109,7 +187,6 @@ function TimelineSection() {
               fontSize: "14",
               fontSmooth: "always",
               userSelect: "none",
-              paddingTop: "18px",
             }}
           >
             Work Experience
@@ -117,7 +194,7 @@ function TimelineSection() {
           <Grid container spacing="24px" sx={{ paddingTop: "24px" }}>
             {workData.map((item) => (
               <Grid item xs={12} sm={6}>
-                <TimelineWork
+                <WorkCard
                   logo={item.logo}
                   jobTitle={item.jobTitle}
                   instance={item.instance}
@@ -134,4 +211,4 @@ function TimelineSection() {
   );
 }
 
-export default TimelineSection;
+export default CareerSection;

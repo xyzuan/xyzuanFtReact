@@ -103,7 +103,7 @@ function Header() {
                 ABOUT
               </Typography>
             </Link>
-            <Link href="#timeline" color="inherit" underline="none">
+            <Link href="#career" color="inherit" underline="none">
               <Typography
                 className={`${manrope.className}`}
                 sx={{
@@ -111,7 +111,7 @@ function Header() {
                   padding: "12px",
                 }}
               >
-                TIMELINE
+                CAREER
               </Typography>
             </Link>
             <Link href="#portofolio" color="inherit" underline="none">
@@ -183,7 +183,7 @@ function Header() {
                 ABOUT
               </Typography>
             </Link>
-            <Link href="#timeline" color="inherit" underline="none">
+            <Link href="#career" color="inherit" underline="none">
               <Typography
                 className={`${manrope.className}`}
                 sx={{
@@ -191,7 +191,7 @@ function Header() {
                   padding: "12px",
                 }}
               >
-                TIMELINE
+                CAREER
               </Typography>
             </Link>
             <Link href="#portofolio" color="inherit" underline="none">

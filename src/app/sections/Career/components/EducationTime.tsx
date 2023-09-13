@@ -3,16 +3,16 @@ import { Typography, Box, Stack } from "@mui/material";
 import { manrope } from "@/app/constant/fonts";
 import { useTheme } from "next-themes";
 
-interface TimelineEvent {
+interface EducationTimeEvent {
   title: string;
   summary: string;
 }
 
-interface TimelineEducationProps {
-  events: TimelineEvent[];
+interface EducationTimeProps {
+  events: EducationTimeEvent[];
 }
 
-const TimelineEducation: React.FC<TimelineEducationProps> = ({ events }) => {
+const EducationTime: React.FC<EducationTimeProps> = ({ events }) => {
   const { theme } = useTheme();
 
   return (
@@ -82,4 +82,4 @@ const TimelineEducation: React.FC<TimelineEducationProps> = ({ events }) => {
   );
 };
 
-export default TimelineEducation;
+export default EducationTime;

@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import useResponsive from "@/app/hooks/useResponsive";
 
-interface TimelineWorkProps {
+interface WorkCardProps {
   logo: string;
   jobTitle: string;
   instance: string;
@@ -14,14 +14,14 @@ interface TimelineWorkProps {
   date: string;
 }
 
-function TimelineWork({
+function WorkCard({
   logo,
   jobTitle,
   instance,
   instanceLink,
   address,
   date,
-}: TimelineWorkProps) {
+}: WorkCardProps) {
   const { theme } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -121,4 +121,4 @@ function TimelineWork({
   );
 }
 
-export default TimelineWork;
+export default WorkCard;

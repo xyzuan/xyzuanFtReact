@@ -2,6 +2,7 @@ import { Container, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import PortofolioCard from "./components/PortofolioCard";
 import { useTheme } from "next-themes";
+import { manrope } from "@/app/constant/fonts";
 
 interface PortfolioItem {
   _id: string;
@@ -58,10 +59,11 @@ function PortofolioSection() {
         Portfolio
       </Typography>
       <Typography
+        className={`${manrope.className}`}
         sx={{
-          fontWeight: "100",
+          fontWeight: "500",
           fontSize: "14",
-          fontFamily: "Roboto Flex, sans-serif",
+          fontSmooth: "always",
           paddingBottom: "24px",
           userSelect: "none",
         }}

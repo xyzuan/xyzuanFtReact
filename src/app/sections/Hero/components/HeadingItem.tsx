@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import React, { useState } from "react";
 import { useTheme } from "next-themes";
+import { manrope } from "@/app/constant/fonts";
 
 interface HeadingItemProps {
   heading: string;

@@ -18,3 +18,10 @@ model Portofolio {
   title     String
   content   String
 }
+
+model Education {
+  id        Int     @id @default(autoincrement())
+  instance  String
+  address   String
+  date      String
+}

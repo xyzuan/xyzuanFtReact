@@ -8,6 +8,7 @@ import PortofolioSection from "./sections/Portfolio/PortofolioSection";
 import TimelineSection from "./sections/Timeline/TimelineSection";
 import { useEffect, useMemo, useState } from "react";
 import Preloader from "./components/Preloader";
+import { manrope } from "./constant/fonts";
 
 export default function Home() {
   const [showPreloader, setShowPreloader] = useState(true);

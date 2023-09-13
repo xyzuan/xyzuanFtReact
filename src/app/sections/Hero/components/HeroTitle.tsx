@@ -1,6 +1,7 @@
 import { Container, Grid, Typography } from "@mui/material";
 import HeadingItem from "./HeadingItem";
 import { useTheme } from "next-themes";
+import { manrope } from "@/app/constant/fonts";
 
 const HeroTitle = () => {
   const { theme } = useTheme();
@@ -36,16 +37,16 @@ const HeroTitle = () => {
         ))}
       </Grid>
       <Typography
+        className={`${manrope.className}`}
         sx={{
           color: theme === "dark" ? "#FFFFFF" : "#000000",
           padding: "36px",
           paddingRight: "50px",
           fontSize: "12px",
-          fontWeight: "100",
+          fontWeight: "400",
           textAlign: "left",
           userSelect: "none",
           transition: "0.3s ease",
-          fontFamily: "Roboto Flex, sans-serif",
           "@media (min-width: 1024px)": {
             textAlign: "right",
             paddingRight: "24px",

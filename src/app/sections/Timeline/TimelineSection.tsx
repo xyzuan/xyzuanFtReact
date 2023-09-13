@@ -1,12 +1,13 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
 import TimelineComponent from "./components/TimelineItem";
+import { manrope } from "@/app/constant/fonts";
 
 function TimelineSection() {
   const educationData = [
     {
       title: "University of Muhammadiyah Malang",
-      summary: "2021- Present | Malang, East Java, Indonesia",
+      summary: "2021 - Present | Malang, East Java, Indonesia",
     },
     {
       title: "SMAN 01 Ngunut",
@@ -43,50 +44,17 @@ function TimelineSection() {
       </Typography>
 
       <Typography
+        className={`${manrope.className}`}
         sx={{
-          fontWeight: "100",
+          fontWeight: "500",
           fontSize: "14",
-          fontFamily: "Roboto Flex, sans-serif",
-          paddingBottom: "24px",
+          fontSmooth: "always",
           userSelect: "none",
         }}
       >
-        Education
+        Education History
       </Typography>
       <TimelineComponent events={educationData} />
-      <Typography
-        sx={{
-          fontWeight: "100",
-          fontSize: "14",
-          fontFamily: "Roboto Flex, sans-serif",
-          paddingBottom: "24px",
-          userSelect: "none",
-        }}
-      >
-        Work Experience
-      </Typography>
-      <Typography
-        sx={{
-          fontWeight: "medium",
-          fontSize: "16",
-          fontFamily: "Roboto Flex, sans-serif",
-          userSelect: "none",
-        }}
-      >
-        Laboratorium Informatika UMM
-      </Typography>
-      <Typography
-        sx={{
-          color: "#DCDCDC",
-          fontWeight: "100",
-          fontSize: "12",
-          fontFamily: "Roboto Flex, sans-serif",
-          userSelect: "none",
-        }}
-      >
-        Malang, East Java, Indoneisa
-      </Typography>
-      <TimelineComponent events={labit} />
     </Container>
   );
 }

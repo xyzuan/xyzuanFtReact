@@ -30,7 +30,6 @@ function Footer() {
             sx={{
               fontWeight: 100,
               padding: "6px",
-              fontFamily: "Roboto Flex, sans-serif",
             }}
           >
             ABOUT
@@ -41,7 +40,6 @@ function Footer() {
             sx={{
               fontWeight: 100,
               padding: "6px",
-              fontFamily: "Roboto Flex, sans-serif",
             }}
           >
             TIMELINE
@@ -52,7 +50,6 @@ function Footer() {
             sx={{
               fontWeight: 100,
               padding: "6px",
-              fontFamily: "Roboto Flex, sans-serif",
             }}
           >
             PORTOFOLIO
@@ -63,7 +60,6 @@ function Footer() {
             sx={{
               fontWeight: 100,
               padding: "6px",
-              fontFamily: "Roboto Flex, sans-serif",
             }}
           >
             CONTACT
@@ -159,7 +155,6 @@ function Footer() {
         sx={{
           fontWeight: "100",
           paddingX: "8px",
-          fontFamily: "Roboto Flex, sans-serif",
         }}
       >
         Designed with love by Jody Yuantoro

@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import ThemeToggle from "./ThemeToggle";
 import useResponsive from "@/app/hooks/useResponsive";
+import { manrope } from "../constant/fonts";
 
 function Header() {
   const { theme } = useTheme();
@@ -93,10 +94,10 @@ function Header() {
           >
             <Link href="#about" color="inherit" underline="none">
               <Typography
+                className={`${manrope.className}`}
                 sx={{
-                  fontWeight: 100,
+                  fontWeight: "medium",
                   padding: "12px",
-                  fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
                 ABOUT
@@ -104,10 +105,10 @@ function Header() {
             </Link>
             <Link href="#timeline" color="inherit" underline="none">
               <Typography
+                className={`${manrope.className}`}
                 sx={{
-                  fontWeight: 100,
+                  fontWeight: "medium",
                   padding: "12px",
-                  fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
                 TIMELINE
@@ -115,10 +116,10 @@ function Header() {
             </Link>
             <Link href="#portofolio" color="inherit" underline="none">
               <Typography
+                className={`${manrope.className}`}
                 sx={{
-                  fontWeight: 100,
+                  fontWeight: "medium",
                   padding: "12px",
-                  fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
                 PORTOFOLIO
@@ -126,10 +127,10 @@ function Header() {
             </Link>
             <Link href="#contact" color="inherit" underline="none">
               <Typography
+                className={`${manrope.className}`}
                 sx={{
-                  fontWeight: 100,
+                  fontWeight: "medium",
                   padding: "12px",
-                  fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
                 CONTACT
@@ -173,10 +174,10 @@ function Header() {
           <Grid>
             <Link href="#about" color="inherit" underline="none">
               <Typography
+                className={`${manrope.className}`}
                 sx={{
-                  fontWeight: 100,
+                  fontWeight: "medium",
                   padding: "12px",
-                  fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
                 ABOUT
@@ -184,10 +185,10 @@ function Header() {
             </Link>
             <Link href="#timeline" color="inherit" underline="none">
               <Typography
+                className={`${manrope.className}`}
                 sx={{
-                  fontWeight: 100,
+                  fontWeight: "medium",
                   padding: "12px",
-                  fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
                 TIMELINE
@@ -195,10 +196,10 @@ function Header() {
             </Link>
             <Link href="#portofolio" color="inherit" underline="none">
               <Typography
+                className={`${manrope.className}`}
                 sx={{
-                  fontWeight: 100,
+                  fontWeight: "medium",
                   padding: "12px",
-                  fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
                 PORTOFOLIO
@@ -206,10 +207,10 @@ function Header() {
             </Link>
             <Link href="#contact" color="inherit" underline="none">
               <Typography
+                className={`${manrope.className}`}
                 sx={{
-                  fontWeight: 100,
+                  fontWeight: "medium",
                   padding: "12px",
-                  fontFamily: "Roboto Flex, sans-serif",
                 }}
               >
                 CONTACT

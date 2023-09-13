@@ -2,6 +2,7 @@ import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
 import { useTheme } from "next-themes";
+import { manrope } from "@/app/constant/fonts";
 
 function AboutHeader() {
   const { theme } = useTheme();
@@ -59,12 +60,12 @@ function AboutHeader() {
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
         <Typography
+          className={`${manrope.className}`}
           sx={{
-            fontWeight: "100",
+            fontWeight: "300",
             lineHeight: "21px",
             textAlign: "right",
             userSelect: "none",
-            fontFamily: "Roboto Flex, sans-serif",
           }}
         >
           xdroidOSS
@@ -134,11 +135,12 @@ function AboutHeader() {
             </Typography>
             <Grid container direction="row">
               <Typography
+                className={`${manrope.className}`}
                 sx={{
-                  fontWeight: "100",
+                  fontWeight: "400",
                   fontSize: "14px",
                   userSelect: "none",
-                  fontFamily: "Roboto Flex, sans-serif",
+
                   color: "white",
                 }}
               >
@@ -154,15 +156,16 @@ function AboutHeader() {
                 }}
               />
               <Typography
+                className={`${manrope.className}`}
                 sx={{
-                  fontWeight: "100",
+                  fontWeight: "400",
                   fontSize: "14px",
                   userSelect: "none",
-                  fontFamily: "Roboto Flex, sans-serif",
+
                   color: "white",
                 }}
               >
-                20 Y/O CANCER
+                21 Y/O CANCER
               </Typography>
             </Grid>
           </Box>

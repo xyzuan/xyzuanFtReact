@@ -1,6 +1,7 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { useTheme } from "next-themes";
+import { manrope } from "@/app/constant/fonts";
 
 interface PortofolioCardProps {
   title: string;
@@ -54,20 +55,27 @@ function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
       />
       <CardContent>
         <Typography
+          className={`${manrope.className}`}
           gutterBottom
-          variant="h5"
           sx={{
-            fontFamily: "Roboto Flex, sans-serif",
+            fontSize: "16px",
+            fontWeight: "800",
+            lineHeight: "1.2em",
+            letterSpacing: "0px",
             userSelect: "none",
+            paddingY: "8px",
             paddingLeft: "8px",
           }}
         >
           {title}
         </Typography>
         <Typography
-          variant="body2"
+          className={`${manrope.className}`}
           sx={{
-            fontFamily: "Roboto Flex, sans-serif",
+            fontSize: "14px",
+            fontWeight: "500",
+            lineHeight: "1.5em",
+            letterSpacing: "0px",
             userSelect: "none",
             paddingLeft: "8px",
           }}

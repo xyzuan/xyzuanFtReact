@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Grid, Typography } from "@mui/material";
 import useResponsive from "@/app/hooks/useResponsive";
+import { manrope } from "@/app/constant/fonts";
 
 function AboutDesc() {
   const isMobile = useResponsive("down", "lg");
@@ -28,17 +29,17 @@ function AboutDesc() {
           Hi,
         </Typography>
         <Typography
+          className={`${manrope.className}`}
           sx={{
             fontSize: "14px",
-            fontWeight: "100",
-            fontFamily: "Roboto Flex, sans-serif",
+            fontSmooth: "always",
             userSelect: "none",
           }}
         >
           I am an Android Developer and Mobile UI/UX Designer currently pursuing
           a major in Informatics Engineering at the University of Muhammadiyah
-          Malang. With a passion for creating innovative isMobile applications,
-          I possess strong skills in Java programming languages, along with
+          Malang. With a passion for creating innovative mobile applications, I
+          possess strong skills in Java programming languages, along with
           proficiency in Android Development. My design background enables me to
           develop visually appealing and user-friendly interfaces. Committed to
           continuous learning and staying updated with industry trends, I bring

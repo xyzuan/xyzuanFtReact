@@ -24,13 +24,13 @@ function TimelineSection() {
       logo: "/assets/infinite.svg",
       jobTitle: "Web Developer Mentee",
       instance: "Infinite Learning Indonesia",
-      instanceLink: "https://infotech.umm.ac.id",
+      instanceLink: "https://www.infinitelearning.id/",
       address: "Batam, Riau Islands, Indonesia",
       date: "Aug 2023 - Present",
     },
     {
       logo: "/assets/labit.svg",
-      jobTitle: "Member of System Information",
+      jobTitle: "System Information",
       instance: "Informatics Laboratory UMM",
       instanceLink: "https://infotech.umm.ac.id",
       address: "Malang, East Java, Indonesia",
@@ -49,7 +49,7 @@ function TimelineSection() {
       jobTitle: "AOSP Developer",
       instance: "PT Lingkup Total Technology",
       instanceLink: "https://lingkup.co.id",
-      address: "Jakarta Timur, DKI Jakarta, Indonesia",
+      address: "Surabaya, East Java, Indonesia",
       date: "Feb 2022 - Dec 2022",
     },
     {
@@ -116,7 +116,7 @@ function TimelineSection() {
           </Typography>
           <Grid container spacing="24px" sx={{ paddingTop: "24px" }}>
             {workData.map((item) => (
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid item xs={12} sm={6}>
                 <TimelineWork
                   logo={item.logo}
                   jobTitle={item.jobTitle}
@@ -128,8 +128,6 @@ function TimelineSection() {
               </Grid>
             ))}
           </Grid>
-
-          {/* <TimelineWork events={workData} /> */}
         </Grid>
       </Grid>
     </Container>

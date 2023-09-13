@@ -31,7 +31,7 @@ function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
   return (
     <Card
       sx={{
-        boxShadow: isHovered ? "0 0 50px rgba(128, 128, 128, 0.5)" : "none",
+        boxShadow: isHovered ? "0 0 30px rgba(128, 128, 128, 0.5)" : "none",
         borderRadius: "32px",
         backgroundColor: theme === "dark" ? "#212121" : "#F4F4F4",
         color: theme === "dark" ? "#ffffff" : "#000000",

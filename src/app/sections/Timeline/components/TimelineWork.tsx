@@ -38,7 +38,7 @@ function TimelineWork({
   return (
     <Card
       sx={{
-        boxShadow: isHovered ? "0 0 50px rgba(128, 128, 128, 0.5)" : "none",
+        boxShadow: isHovered ? "0 0 30px rgba(128, 128, 128, 0.4)" : "none",
         borderRadius: "24px",
         backgroundColor: theme === "dark" ? "#212121" : "#F4F4F4",
         color: theme === "dark" ? "#ffffff" : "#000000",
@@ -67,6 +67,8 @@ function TimelineWork({
             alt={logo}
             style={{
               marginRight: "18px",
+              transition: "0.3s ease",
+              WebkitFilter: isHovered ? "grayscale(0%)" : "grayscale(100%)",
             }}
           />
           <div>

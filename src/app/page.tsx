@@ -6,14 +6,14 @@ import HeroSection from "./sections/Hero/HeroSection";
 import AboutSection from "./sections/About/AboutSection";
 import PortofolioSection from "./sections/Portfolio/PortofolioSection";
 import TimelineSection from "./sections/Timeline/TimelineSection";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Preloader from "./components/Preloader";
 
 export default function Home() {
   const [showPreloader, setShowPreloader] = useState(true);
   const [contentVisible, setContentVisible] = useState(false);
 
-  useMemo(() => {
+  useEffect(() => {
     setTimeout(() => {
       setShowPreloader(false);
       setTimeout(() => {
@@ -22,7 +22,7 @@ export default function Home() {
     }, 2000);
   }, []);
 
-  useMemo(() => {
+  useEffect(() => {
     if (showPreloader) {
       document.body.style.overflow = "hidden";
     } else {

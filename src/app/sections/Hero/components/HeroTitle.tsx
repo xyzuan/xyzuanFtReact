@@ -43,7 +43,6 @@ const HeroTitle = () => {
           padding: "36px",
           paddingRight: "50px",
           fontSize: "12px",
-          fontWeight: "400",
           textAlign: "left",
           userSelect: "none",
           transition: "0.3s ease",

@@ -173,7 +173,7 @@ function CareerSection() {
           <Typography
             className={`${manrope.className}`}
             sx={{
-              fontWeight: "500",
+              fontWeight: "600",
               fontSize: "14",
               fontSmooth: "always",
               userSelect: "none",
@@ -187,7 +187,7 @@ function CareerSection() {
           <Typography
             className={`${manrope.className}`}
             sx={{
-              fontWeight: "500",
+              fontWeight: "600",
               fontSize: "14",
               fontSmooth: "always",
               userSelect: "none",

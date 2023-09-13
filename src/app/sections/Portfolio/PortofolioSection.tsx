@@ -61,7 +61,6 @@ function PortofolioSection() {
       <Typography
         className={`${manrope.className}`}
         sx={{
-          fontWeight: "500",
           fontSize: "14",
           fontSmooth: "always",
           paddingBottom: "24px",

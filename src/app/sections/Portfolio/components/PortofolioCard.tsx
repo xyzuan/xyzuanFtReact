@@ -58,13 +58,14 @@ function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
           className={`${manrope.className}`}
           gutterBottom
           sx={{
-            fontSize: "16px",
-            fontWeight: "800",
+            fontSize: "18px",
+            fontWeight: "bold",
             lineHeight: "1.2em",
             letterSpacing: "0px",
             userSelect: "none",
             paddingY: "8px",
             paddingLeft: "8px",
+            paddingRight: "18px",
           }}
         >
           {title}
@@ -73,7 +74,6 @@ function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
           className={`${manrope.className}`}
           sx={{
             fontSize: "14px",
-            fontWeight: "500",
             lineHeight: "1.5em",
             letterSpacing: "0px",
             userSelect: "none",

@@ -2,6 +2,7 @@ import { Container, Grid, IconButton, Link, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import { useTheme } from "next-themes";
+import { manrope } from "../constant/fonts";
 
 function Footer() {
   const { theme } = useTheme();
@@ -27,8 +28,9 @@ function Footer() {
       <Grid>
         <Link href="#about" color="inherit" underline="none">
           <Typography
+            className={`${manrope.className}`}
             sx={{
-              fontWeight: 100,
+              fontWeight: "medium",
               padding: "6px",
             }}
           >
@@ -37,18 +39,20 @@ function Footer() {
         </Link>
         <Link href="#timeline" color="inherit" underline="none">
           <Typography
+            className={`${manrope.className}`}
             sx={{
-              fontWeight: 100,
+              fontWeight: "medium",
               padding: "6px",
             }}
           >
-            TIMELINE
+            CAREER
           </Typography>
         </Link>
         <Link href="#portofolio" color="inherit" underline="none">
           <Typography
+            className={`${manrope.className}`}
             sx={{
-              fontWeight: 100,
+              fontWeight: "medium",
               padding: "6px",
             }}
           >
@@ -57,8 +61,9 @@ function Footer() {
         </Link>
         <Link href="#contact" color="inherit" underline="none">
           <Typography
+            className={`${manrope.className}`}
             sx={{
-              fontWeight: 100,
+              fontWeight: "medium",
               padding: "6px",
             }}
           >
@@ -152,8 +157,9 @@ function Footer() {
         </Link>
       </Grid>
       <Typography
+        className={`${manrope.className}`}
         sx={{
-          fontWeight: "100",
+          fontWeight: "medium",
           paddingX: "8px",
         }}
       >

@@ -25,7 +25,13 @@ function AboutSkill() {
       >
         My skills,
       </Typography>
-      <div className="flex flex-wrap gap-6">
+      <div
+        className="flex flex-wrap gap-6"
+        style={{
+          alignItems: "center",
+          alignContent: "center",
+        }}
+      >
         {skills?.map((skill, index) => (
           <StackItem key={index} skill={skill} />
         ))}

@@ -50,7 +50,7 @@ const EducationTime: React.FC<EducationTimeProps> = ({ events }) => {
             >
               <div
                 style={{
-                  paddingLeft: "24px",
+                  paddingLeft: "16px",
                 }}
               >
                 <Typography

@@ -1,12 +1,14 @@
 import { BiLogoPostgresql } from "react-icons/bi";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import {
+  SiAndroid,
   SiApollographql,
   SiChakraui,
   SiCss3,
   SiExpo,
   SiExpress,
   SiFirebase,
+  SiFlutter,
   SiFramer,
   SiGithub,
   SiGraphql,
@@ -14,7 +16,9 @@ import {
   SiHtml5,
   SiJavascript,
   SiJest,
+  SiKotlin,
   SiLaravel,
+  SiLinux,
   SiMui,
   SiNextdotjs,
   SiNodedotjs,
@@ -73,4 +77,8 @@ export const Stacks: stacksProps = {
   Prisma: <SiPrisma size={iconSize} className="text-teal-500" />,
   "Node JS": <SiNodedotjs size={iconSize} className="text-green-600" />,
   Github: <SiGithub size={iconSize} />,
+  Kotlin: <SiKotlin size={iconSize} className="text-purple-500" />,
+  Flutter: <SiFlutter size={iconSize} className="text-blue-500" />,
+  Android: <SiAndroid size={iconSize} className="text-green-500" />,
+  Linux: <SiLinux size={iconSize} />,
 };

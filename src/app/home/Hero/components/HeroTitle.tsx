@@ -8,7 +8,7 @@ const HeroTitle = () => {
   const headings: string[] = [
     "android",
     "flutter",
-    "java",
+    "kotlin",
     "ui/ux",
     "js",
     "next.js",

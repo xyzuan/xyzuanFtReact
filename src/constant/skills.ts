@@ -1,5 +1,7 @@
 export const skills = [
-  "React Native",
+  "Android",
+  "Kotlin",
+  "Flutter",
   "Next.js",
   "React.js",
   "Node JS",

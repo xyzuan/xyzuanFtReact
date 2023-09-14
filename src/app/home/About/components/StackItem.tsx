@@ -31,6 +31,7 @@ export default function StackItem({ skill }: { skill: string }) {
             ? "grayscale(100%) brightness(100%)"
             : "grayscale(100%) brightness(48%)",
           transition: "0.3s ease-in-out",
+          scale: isHovered ? "110%" : "100%",
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

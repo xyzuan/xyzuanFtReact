@@ -14,16 +14,12 @@ import PortofolioSection from "./home/Portfolio/PortofolioSection";
 import CareerSection from "./home/Career/CareerSection";
 
 export default function Home() {
-  const [showPreloader, setShowPreloader] = useState(true);
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setShowPreloader(false);
-      setTimeout(() => {
-        setContentVisible(true);
-      }, 100);
-    }, 2000);
+      setContentVisible(true);
+    }, 500);
   }, []);
 
   useEffect(() => {

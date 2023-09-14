@@ -1,14 +1,25 @@
+// @react
 import { useMemo, useState } from "react";
-import { Container, Grid, Link, Typography } from "@mui/material";
-import { manrope } from "@/constant/fonts";
 import { useTheme } from "next-themes";
-import useResponsive from "@/utils/useResponsive";
+
+// @mui
+import { Container, Grid, Link, Typography } from "@mui/material";
+
+// @components
 import WorkCard from "./components/WorkCard";
-import { Education } from "@/types/Education";
 import EducationTime from "./components/EducationTime";
 
+// @utils
+import useResponsive from "@/utils/useResponsive";
+
+// @constant
+import { manrope } from "@/constant/fonts";
+
+// @types
+import { Education } from "@/types/Education";
+import { Work } from "@/types/Work";
+
 function CareerSection() {
-  // utils
   const isMobile = useResponsive("down", "lg");
   const { theme } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
@@ -23,6 +34,7 @@ function CareerSection() {
 
   // APIs Data
   const [educations, setEducations] = useState<Education[]>([]);
+  const [works, setWorks] = useState<Work[]>([]);
   useMemo(() => {
     fetch("http://localhost:3000/api/educations")
       .then((response) => {
@@ -35,54 +47,18 @@ function CareerSection() {
         const extractedEducations = data.educations;
         setEducations(extractedEducations);
       });
+    fetch("http://localhost:3000/api/works")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const extractedWorks = data.works;
+        setWorks(extractedWorks);
+      });
   }, []);
-
-  const workData = [
-    {
-      _id: "01",
-      logo: "/assets/infinite.svg",
-      jobTitle: "Web Developer Mentee",
-      instance: "Infinite Learning Indonesia",
-      instanceLink: "https://www.infinitelearning.id/",
-      address: "Batam, Riau Islands, Indonesia",
-      date: "Aug 2023 - Present",
-    },
-    {
-      _id: "02",
-      logo: "/assets/labit.svg",
-      jobTitle: "System Information",
-      instance: "Informatics Laboratory UMM",
-      instanceLink: "https://infotech.umm.ac.id",
-      address: "Malang, East Java, Indonesia",
-      date: "Jan 2023 - Present",
-    },
-    {
-      logo: "/assets/labit.svg",
-      jobTitle: "Laboratory Assistant",
-      instance: "Informatics Laboratory UMM",
-      instanceLink: "https://infotech.umm.ac.id",
-      address: "Malang, East Java, Indonesia",
-      date: "Jul 2022 - Present",
-    },
-    {
-      _id: "03",
-      logo: "/assets/lingkup.svg",
-      jobTitle: "AOSP Developer",
-      instance: "PT Lingkup Total Technology",
-      instanceLink: "https://lingkup.co.id",
-      address: "Surabaya, East Java, Indonesia",
-      date: "Feb 2022 - Dec 2022",
-    },
-    {
-      _id: "04",
-      logo: "/assets/xd.svg",
-      jobTitle: "AOSP Developer",
-      instance: "xdroidOSS",
-      instanceLink: "https://github.com/xdroidoss",
-      address: "Malang, East Java, Indonesia",
-      date: "Jan 2021 - Present",
-    },
-  ];
 
   return (
     <Container
@@ -212,8 +188,8 @@ function CareerSection() {
             Work Experience
           </Typography>
           <Grid container spacing="24px" sx={{ paddingTop: "24px" }}>
-            {workData.map((item) => (
-              <Grid data-aos="fade-up" key={item._id} item xs={12} sm={6}>
+            {works.map((item) => (
+              <Grid data-aos="fade-up" key={item.id} item xs={12} sm={6}>
                 <WorkCard
                   logo={item.logo}
                   jobTitle={item.jobTitle}

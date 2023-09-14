@@ -46,7 +46,7 @@ function AboutDesc() {
           a combination of technical expertise, design proficiency, and a strong
           educational foundation to my work.
         </Typography>
-        <Typography
+        {/* <Typography
           sx={{
             fontFamily: "Prestige",
             fontSize: "6rem",
@@ -55,7 +55,7 @@ function AboutDesc() {
           }}
         >
           xyzuan
-        </Typography>
+        </Typography> */}
       </Grid>
     </Container>
   );

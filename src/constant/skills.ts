@@ -1,0 +1,15 @@
+export const skills = [
+  "React Native",
+  "Next.js",
+  "React.js",
+  "Node JS",
+  "Express.js",
+  "TailwindCSS",
+  "Material UI",
+  "Firebase",
+  "Prisma",
+  "JavaScript",
+  "TypeScript",
+  "HTML",
+  "CSS",
+];

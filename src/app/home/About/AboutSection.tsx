@@ -1,8 +1,9 @@
 import React from "react";
 import AboutHeader from "./components/AboutHeader";
-import { Container } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import AboutDesc from "./components/AboutDesc";
 import { useTheme } from "next-themes";
+import AboutSkill from "./components/AboutSkill";
 
 function AboutSection() {
   const { theme } = useTheme();
@@ -23,7 +24,10 @@ function AboutSection() {
       }}
     >
       <AboutHeader />
-      <AboutDesc />
+      <Grid>
+        <AboutDesc />
+        <AboutSkill />
+      </Grid>
     </Container>
   );
 }

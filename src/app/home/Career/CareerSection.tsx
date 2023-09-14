@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Container, Grid, Link, Typography } from "@mui/material";
 import { manrope } from "@/constant/fonts";
+import { useTheme } from "next-themes";
 import useResponsive from "@/utils/useResponsive";
 import WorkCard from "./components/WorkCard";
+import { Education } from "@/types/Education";
 import EducationTime from "./components/EducationTime";
-import { useTheme } from "next-themes";
 
 function CareerSection() {
+  // utils
   const isMobile = useResponsive("down", "lg");
   const { theme } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
@@ -19,16 +21,21 @@ function CareerSection() {
     setIsHovered(false);
   };
 
-  const educationData = [
-    {
-      title: "University of Muhammadiyah Malang",
-      summary: "2021 - Present • Malang, East Java, Indonesia",
-    },
-    {
-      title: "SMAN 01 Ngunut",
-      summary: "2019 - 2021 • Tulungagung, East Java, Indonesia",
-    },
-  ];
+  // APIs Data
+  const [educations, setEducations] = useState<Education[]>([]);
+  useMemo(() => {
+    fetch("http://localhost:3000/api/educations")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const extractedEducations = data.educations;
+        setEducations(extractedEducations);
+      });
+  }, []);
 
   const workData = [
     {
@@ -178,11 +185,19 @@ function CareerSection() {
               fontSize: "14",
               fontSmooth: "always",
               userSelect: "none",
+              paddingBottom: "18px",
             }}
           >
             Education History
           </Typography>
-          <EducationTime events={educationData} />
+          {educations.map((item) => (
+            <EducationTime
+              id={item.id}
+              instance={item.instance}
+              date={item.date}
+              address={item.address}
+            />
+          ))}
         </Container>
         <Grid>
           <Typography

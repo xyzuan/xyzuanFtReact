@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Preloader from "./components/Preloader";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Preloader from "../components/Preloader";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-import HeroSection from "./sections/Hero/HeroSection";
-import AboutSection from "./sections/About/AboutSection";
-import PortofolioSection from "./sections/Portfolio/PortofolioSection";
-import CareerSection from "./sections/Career/CareerSection";
+import HeroSection from "./home/Hero/HeroSection";
+import AboutSection from "./home/About/AboutSection";
+import PortofolioSection from "./home/Portfolio/PortofolioSection";
+import CareerSection from "./home/Career/CareerSection";
 
 export default function Home() {
   const [showPreloader, setShowPreloader] = useState(true);

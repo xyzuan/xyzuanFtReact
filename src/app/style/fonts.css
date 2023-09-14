@@ -1,9 +1,9 @@
 @font-face {
   font-family: "Laviossa";
-  src: url("../fonts/Laviossa-Medium.otf") format("truetype");
+  src: url("../../fonts/Laviossa-Medium.otf") format("truetype");
 }
 
 @font-face {
   font-family: "Prestige";
-  src: url("../fonts/Prestige-Signature.ttf") format("truetype");
+  src: url("../../fonts/Prestige-Signature.ttf") format("truetype");
 }

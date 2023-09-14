@@ -11,6 +11,7 @@ const HeroTitle = () => {
     "kotlin",
     "ui/ux",
     "js",
+    "ts",
     "next.js",
     "design",
     "express",

@@ -13,6 +13,7 @@ import EducationTime from "./components/EducationTime";
 import useResponsive from "@/utils/useResponsive";
 
 // @constant
+import { apiURI } from "@/constant/api";
 import { manrope } from "@/constant/fonts";
 
 // @types
@@ -36,7 +37,7 @@ function CareerSection() {
   const [educations, setEducations] = useState<Education[]>([]);
   const [works, setWorks] = useState<Work[]>([]);
   useMemo(() => {
-    fetch("http://localhost:3000/api/educations")
+    fetch(`${apiURI}/educations`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -47,7 +48,7 @@ function CareerSection() {
         const extractedEducations = data.educations;
         setEducations(extractedEducations);
       });
-    fetch("http://localhost:3000/api/works")
+    fetch(`${apiURI}/works`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -168,6 +169,7 @@ function CareerSection() {
           </Typography>
           {educations.map((item) => (
             <EducationTime
+              key={item.id}
               id={item.id}
               instance={item.instance}
               date={item.date}

@@ -11,6 +11,7 @@ function AboutSection() {
     <Container
       disableGutters
       id="about"
+      data-aos="fade-up"
       sx={{
         borderRadius: "32px",
         backgroundColor: theme === "dark" ? "#212121" : "#F4F4F4",

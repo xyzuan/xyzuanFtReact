@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Grid, Typography } from "@mui/material";
-import useResponsive from "@/utils/useResponsive";
 import { manrope } from "@/constant/fonts";
 
 function AboutDesc() {
-  const isMobile = useResponsive("down", "lg");
-
   return (
     <Container
       disableGutters
@@ -46,16 +43,6 @@ function AboutDesc() {
           a combination of technical expertise, design proficiency, and a strong
           educational foundation to my work.
         </Typography>
-        {/* <Typography
-          sx={{
-            fontFamily: "Prestige",
-            fontSize: "6rem",
-            textAlign: "right",
-            paddingRight: isMobile ? 0 : "32px",
-          }}
-        >
-          xyzuan
-        </Typography> */}
       </Grid>
     </Container>
   );

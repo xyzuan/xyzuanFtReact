@@ -72,7 +72,7 @@ function PortofolioSection() {
       </Typography>
       <Grid container spacing="24px">
         {portfolio.map((item) => (
-          <Grid key={item._id} item xs={12} sm={6} md={4}>
+          <Grid data-aos="fade-up" key={item._id} item xs={12} sm={6} md={4}>
             <PortofolioCard
               title={item.title}
               desc={item.desc}

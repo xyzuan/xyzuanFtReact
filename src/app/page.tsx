@@ -27,35 +27,22 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (showPreloader) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-  }, [showPreloader]);
-
-  useEffect(() => {
-    AOS.init({
-      offset: 0,
-    });
+    AOS.init();
   }, []);
 
   return (
-    <div className={`fade-animation ${contentVisible ? "hide-content" : ""}`}>
-      {showPreloader && <Preloader />}
-      <div
-        style={{
-          opacity: contentVisible ? 1 : 0,
-          transition: "opacity 0.3s ease-in-out",
-        }}
-      >
-        <Header />
-        <HeroSection />
-        <AboutSection />
-        <CareerSection />
-        <PortofolioSection />
-        <Footer />
-      </div>
+    <div
+      style={{
+        opacity: contentVisible ? 1 : 0,
+        transition: "opacity 0.3s ease-in-out",
+      }}
+    >
+      <Header />
+      <HeroSection />
+      <AboutSection />
+      <CareerSection />
+      <PortofolioSection />
+      <Footer />
     </div>
   );
 }

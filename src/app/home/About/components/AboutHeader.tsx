@@ -40,6 +40,7 @@ function AboutHeader() {
       <Grid
         container
         direction="row"
+        data-aos="fade-up"
         sx={{
           padding: "18px",
           paddingX: "32px",
@@ -79,6 +80,7 @@ function AboutHeader() {
       >
         <Stack>
           <Box
+            data-aos="fade-up"
             sx={{
               position: "absolute",
               width: "160%",
@@ -114,6 +116,7 @@ function AboutHeader() {
             onTouchEnd={handleTouchEnd}
           />
           <Box
+            data-aos="fade-up"
             sx={{
               position: "absolute",
               width: "100%",

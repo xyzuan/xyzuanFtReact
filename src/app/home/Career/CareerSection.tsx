@@ -81,6 +81,7 @@ function CareerSection() {
     <Container
       disableGutters
       id="career"
+      data-aos="fade-up"
       sx={{
         paddingTop: "32px",
         paddingX: "34px",
@@ -197,7 +198,7 @@ function CareerSection() {
           </Typography>
           <Grid container spacing="24px" sx={{ paddingTop: "24px" }}>
             {workData.map((item) => (
-              <Grid key={item._id} item xs={12} sm={6}>
+              <Grid data-aos="fade-up" key={item._id} item xs={12} sm={6}>
                 <WorkCard
                   logo={item.logo}
                   jobTitle={item.jobTitle}

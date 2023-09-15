@@ -18,11 +18,12 @@ model User {
   name     String?
 }
 
-model Portofolio {
+model Portfolio {
   id        Int     @id @default(autoincrement())
   img       String
   title     String
   content   String
+  href      String
 }
 
 model Education {

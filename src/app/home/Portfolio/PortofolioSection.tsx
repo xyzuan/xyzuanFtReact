@@ -6,20 +6,11 @@ import { useTheme } from "next-themes";
 import { manrope } from "@/constant/fonts";
 
 import PortofolioCard from "./components/PortofolioCard";
-
-interface PortfolioItem {
-  _id: string;
-  title: string;
-  desc: string;
-  img: string;
-  href: string;
-}
+import { PortfolioItem } from "@/types/Portofolio";
 
 function PortofolioSection() {
   const { theme } = useTheme();
   const [portfolio, setPortfolio] = useState<PortfolioItem[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const apiUrl = "https://api.xyzuan.my.id/portfolio";
@@ -35,11 +26,6 @@ function PortofolioSection() {
       .then((response) => response.json())
       .then((data) => {
         setPortfolio(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(error);
-        setLoading(false);
       });
   }, []);
 
@@ -75,10 +61,10 @@ function PortofolioSection() {
       </Typography>
       <Grid container spacing="24px">
         {portfolio.map((item) => (
-          <Grid data-aos="fade-up" key={item._id} item xs={12} sm={6} md={4}>
+          <Grid data-aos="fade-up" key={item.id} item xs={12} sm={6} md={4}>
             <PortofolioCard
               title={item.title}
-              desc={item.desc}
+              desc={item.content}
               img={item.img}
               href={item.href}
             />

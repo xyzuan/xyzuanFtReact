@@ -22,6 +22,8 @@ import { manrope } from "@/constant/fonts";
 import { Education } from "@/types/Education";
 import { Work } from "@/types/Work";
 
+export const dynamic = "force-dynamic";
+
 function CareerSection() {
   const isMobile = useResponsive("down", "lg");
   const { theme } = useTheme();

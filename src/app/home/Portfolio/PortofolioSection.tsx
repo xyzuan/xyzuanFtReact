@@ -9,6 +9,8 @@ import PortofolioCard from "./components/PortofolioCard";
 import { PortfolioItem } from "@/types/Portofolio";
 import { apiURI } from "@/constant/api";
 
+export const dynamic = "force-dynamic";
+
 function PortofolioSection() {
   const { theme } = useTheme();
   const [portfolio, setPortfolio] = useState<PortfolioItem[]>([]);

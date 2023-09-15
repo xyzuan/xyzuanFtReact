@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { apiURI } from "@/constant/api";
 import { toBase64 } from "@/utils/useBase64";
 import { CardMedia } from "@mui/material";
 import { ChangeEvent, useState } from "react";
@@ -24,7 +25,7 @@ export async function updatePortofolio(
   img: any,
   href: string
 ) {
-  fetch(`http://localhost:3000/api/portfolios`, {
+  fetch(`${apiURI}/portfolios`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",

@@ -8,6 +8,7 @@ import { signIn, useSession } from "next-auth/react";
 import { useMemo, useState } from "react";
 import { PortfolioItem } from "@/types/Portofolio";
 import { PortfolioCard } from "./components/portfolio-card";
+import { apiURI } from "@/constant/api";
 
 export default function page() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -23,7 +24,7 @@ export default function page() {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useMemo(() => {
-    fetch(`http://localhost:3000/api/portfolios`)
+    fetch(`${apiURI}/portfolios`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

@@ -1,31 +1,29 @@
 "use client";
 
 import { Container, Grid, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTheme } from "next-themes";
 import { manrope } from "@/constant/fonts";
 
 import PortofolioCard from "./components/PortofolioCard";
 import { PortfolioItem } from "@/types/Portofolio";
+import { apiURI } from "@/constant/api";
 
 function PortofolioSection() {
   const { theme } = useTheme();
   const [portfolio, setPortfolio] = useState<PortfolioItem[]>([]);
 
-  useEffect(() => {
-    const apiUrl = "https://api.xyzuan.my.id/portfolio";
-    const headers = new Headers();
-    headers.set(
-      "Authorization",
-      "Basic " + btoa(process.env.API_USERNAME + ":" + process.env.API_PASSWORD)
-    );
-    fetch(apiUrl, {
-      method: "GET",
-      headers: headers,
-    })
-      .then((response) => response.json())
+  useMemo(() => {
+    fetch(`${apiURI}/portfolios`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
       .then((data) => {
-        setPortfolio(data);
+        const extractedPortfolios = data.portfolios;
+        setPortfolio(extractedPortfolios);
       });
   }, []);
 

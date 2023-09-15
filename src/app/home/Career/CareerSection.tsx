@@ -1,3 +1,5 @@
+"use client";
+
 // @react
 import { useMemo, useState } from "react";
 import { useTheme } from "next-themes";

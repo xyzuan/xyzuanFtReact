@@ -1,8 +1,11 @@
+"use client";
+
 import { Container, Grid, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import PortofolioCard from "./components/PortofolioCard";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { manrope } from "@/constant/fonts";
+
+import PortofolioCard from "./components/PortofolioCard";
 
 interface PortfolioItem {
   _id: string;

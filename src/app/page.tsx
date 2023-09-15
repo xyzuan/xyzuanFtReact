@@ -1,44 +1,8 @@
-"use client";
-import { useEffect, useState } from "react";
+import { getServerSession } from "next-auth";
+import HomePage from "./home/page";
+import { authOptions } from "./api/auth/[...nextauth]/route";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-import Preloader from "../components/Preloader";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
-import HeroSection from "./home/Hero/HeroSection";
-import AboutSection from "./home/About/AboutSection";
-import PortofolioSection from "./home/Portfolio/PortofolioSection";
-import CareerSection from "./home/Career/CareerSection";
-
-export default function Home() {
-  const [contentVisible, setContentVisible] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setContentVisible(true);
-    }, 500);
-  }, []);
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
-  return (
-    <div
-      style={{
-        opacity: contentVisible ? 1 : 0,
-        transition: "opacity 0.3s ease-in-out",
-      }}
-    >
-      <Header />
-      <HeroSection />
-      <AboutSection />
-      <CareerSection />
-      <PortofolioSection />
-      <Footer />
-    </div>
-  );
+export default async function Home() {
+  const session = await getServerSession(authOptions);
+  return <HomePage />;
 }

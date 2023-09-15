@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+"use client";
+
 import HeroPic from "./components/HeroPic";
 import HeroTitle from "./components/HeroTitle";
 import { Box, Container, Stack } from "@mui/material";

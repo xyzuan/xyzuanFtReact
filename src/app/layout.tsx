@@ -4,6 +4,7 @@ import "./style/fonts.css";
 import { useEffect } from "react";
 import ReactGA from "react-ga";
 import ThemeProviderContext from "@/context/ThemeProvider.context";
+import { AuthProviders } from "@/context/SessionProvider.context";
 
 const siteTitle = "Jody Yuantoro | Frontend Developer";
 const siteDesc =
@@ -42,7 +43,9 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
       </head>
       <body className={`duration-200`}>
-        <ThemeProviderContext>{children}</ThemeProviderContext>
+        <AuthProviders>
+          <ThemeProviderContext>{children}</ThemeProviderContext>
+        </AuthProviders>
       </body>
     </html>
   );

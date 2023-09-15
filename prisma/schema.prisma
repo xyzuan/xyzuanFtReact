@@ -11,6 +11,13 @@ datasource db {
   relationMode = "prisma"
 }
 
+model User {
+  id       String     @id @default(uuid())
+  email    String     @unique
+  password String
+  name     String?
+}
+
 model Portofolio {
   id        Int     @id @default(autoincrement())
   img       String

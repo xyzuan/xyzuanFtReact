@@ -84,7 +84,8 @@ export function PortfolioCard({ item }: any) {
         <DialogHeader>
           <DialogTitle>Edit Portofolio</DialogTitle>
           <DialogDescription>
-            Make changes to your portofolio here. Click save when you're done.
+            Make changes to your portofolio here. Click save when you&apos;re
+            done.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">

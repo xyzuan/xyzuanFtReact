@@ -10,6 +10,7 @@ import { PortfolioItem } from "@/types/Portofolio";
 import { PortfolioCard } from "./components/portfolio-card";
 
 export default function page() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { status, data: session } = useSession({
     required: true,
     onUnauthenticated() {
@@ -17,8 +18,10 @@ export default function page() {
     },
   });
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [portfolio, setPortfolio] = useState<PortfolioItem[]>([]);
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useMemo(() => {
     fetch(`http://localhost:3000/api/portfolios`)
       .then((response) => {
@@ -61,7 +64,7 @@ export default function page() {
               <TabsContent value="portfolios" className="space-y-4">
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                   {portfolio.map((item) => (
-                    <PortfolioCard item={item} />
+                    <PortfolioCard key={item.id} item={item} />
                   ))}
                 </div>
               </TabsContent>

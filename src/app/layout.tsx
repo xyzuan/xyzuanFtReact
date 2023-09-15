@@ -1,8 +1,13 @@
 "use client";
+
 import "./style/globals.css";
 import "./style/fonts.css";
+
 import { useEffect } from "react";
 import ReactGA from "react-ga";
+
+import { Analytics } from "@vercel/analytics/react";
+
 import ThemeProviderContext from "@/context/ThemeProvider.context";
 import { AuthProviders } from "@/context/SessionProvider.context";
 
@@ -45,6 +50,7 @@ export default function RootLayout({
       <body className={`duration-200`}>
         <AuthProviders>
           <ThemeProviderContext>{children}</ThemeProviderContext>
+          <Analytics />
         </AuthProviders>
       </body>
     </html>

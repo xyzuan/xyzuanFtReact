@@ -9,6 +9,8 @@ import { useMemo, useState } from "react";
 import { PortfolioItem } from "@/types/Portofolio";
 import { PortfolioCard } from "./components/portfolio-card";
 import { apiURI } from "@/constant/api";
+import { Grid } from "@mui/material";
+import { PortfolioAdd } from "./components/portfolio-add";
 
 export default function page() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -21,6 +23,13 @@ export default function page() {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [portfolio, setPortfolio] = useState<PortfolioItem[]>([]);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [selectedTab, setSelectedTab] = useState("portfolios");
+
+  const handleTabChange = (newValue: any) => {
+    setSelectedTab(newValue);
+  };
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useMemo(() => {
@@ -58,10 +67,33 @@ export default function page() {
               <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
             </div>
             <Tabs defaultValue="portfolios" className="space-y-4">
-              <TabsList>
-                <TabsTrigger value="portfolios">Portofolios</TabsTrigger>
-                <TabsTrigger value="works">Works</TabsTrigger>
-              </TabsList>
+              <Grid
+                container
+                sx={{
+                  flexDirection: "row",
+                }}
+              >
+                <TabsList>
+                  <TabsTrigger
+                    value="portfolios"
+                    onClick={() => handleTabChange("portfolios")}
+                  >
+                    Portofolios
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="works"
+                    onClick={() => handleTabChange("works")}
+                  >
+                    Works
+                  </TabsTrigger>
+                </TabsList>
+                <div
+                  style={{
+                    flexGrow: 1,
+                  }}
+                />
+                {selectedTab === "portfolios" && <PortfolioAdd />}
+              </Grid>
               <TabsContent value="portfolios" className="space-y-4">
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                   {portfolio.map((item) => (

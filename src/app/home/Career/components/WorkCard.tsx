@@ -6,7 +6,7 @@ import Image from "next/image";
 import useResponsive from "@/utils/useResponsive";
 
 interface WorkCardProps {
-  logo: string;
+  logo: any;
   jobTitle: string;
   instance: string;
   instanceLink: string;
@@ -60,7 +60,7 @@ function WorkCard({
             flexDirection: "row",
           }}
         >
-          <Image
+          <img
             width="52"
             height="52"
             src={logo}

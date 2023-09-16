@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/dialog";
 import { apiURI } from "@/constant/api";
 
-export async function deletePortfolio(id: number) {
-  fetch(`${apiURI}/portfolios`, {
+export async function deleteWork(id: number) {
+  fetch(`${apiURI}/works`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -28,12 +28,12 @@ export async function deletePortfolio(id: number) {
   });
 }
 
-export function PortfolioDelete({ item }: any) {
+export function WorkDelete({ item }: any) {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button
-          variant="destructive"
+          variant="outline"
           style={{
             marginRight: "8px",
           }}
@@ -43,17 +43,17 @@ export function PortfolioDelete({ item }: any) {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Delete Portofolio</DialogTitle>
+          <DialogTitle>Delete Work</DialogTitle>
           <DialogDescription>
-            Are you sure to delete {item.title} data from server? Click confirm
-            when yes.
+            Are you sure to delete {item.instance} data from server? Click
+            confirm when yes.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
           <Button
             type="submit"
             onClick={async () => {
-              await deletePortfolio(item.id);
+              await deleteWork(item.id);
             }}
           >
             Confirm

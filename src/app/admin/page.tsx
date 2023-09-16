@@ -1,19 +1,17 @@
 "use client";
 
 import { useSession } from "next-auth/react";
-import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 function page() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { status } = useSession({
-    required: true,
-    onUnauthenticated() {
-      signIn();
-    },
-  });
+  const router = useRouter();
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { status } = useSession();
 
   if (status === "authenticated") {
-    window.location.href = "/admin/dashboard";
+    router.push("/admin/dashboard");
   }
 }
 

@@ -9,6 +9,9 @@ export const authOptions: NextAuthOptions = {
     strategy: "jwt",
     maxAge: 3600,
   },
+  pages: {
+    signIn: "/auth/login",
+  },
   providers: [
     CredentialsProvider({
       name: "xyzscape",

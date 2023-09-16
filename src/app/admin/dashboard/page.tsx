@@ -18,9 +18,6 @@ export default function page() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { status, data: session } = useSession({
     required: true,
-    onUnauthenticated() {
-      signIn();
-    },
   });
 
   // eslint-disable-next-line react-hooks/rules-of-hooks

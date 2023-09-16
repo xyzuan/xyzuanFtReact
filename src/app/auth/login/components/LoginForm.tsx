@@ -5,13 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
-import { signIn, useSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { ChangeEvent, useState } from "react";
 
 export const LoginForm = () => {
-  const router = useRouter();
-
   const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState({
     email: "",
@@ -28,7 +26,7 @@ export const LoginForm = () => {
       setLoading(true);
 
       const res = await signIn("credentials", {
-        redirect: true,
+        redirect: false,
         email: formValues.email,
         password: formValues.password,
         callbackUrl,
@@ -39,7 +37,7 @@ export const LoginForm = () => {
       if (res?.error) {
         setError("Invalid email or password");
       } else {
-        router.push(callbackUrl);
+        window.location.href = "/admin/dashboard";
       }
     } catch (error: any) {
       setLoading(false);

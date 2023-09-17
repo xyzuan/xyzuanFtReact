@@ -38,9 +38,11 @@ function WorkCard({
   return (
     <Card
       sx={{
-        boxShadow: isHovered ? "0 0 30px rgba(128, 128, 128, 0.4)" : "none",
+        boxShadow: isHovered
+          ? "0 0 30px rgba(128, 128, 128, 0.4)"
+          : "0 0 25px rgba(128, 128, 128, 0.1)",
         borderRadius: "24px",
-        backgroundColor: theme === "dark" ? "#212121" : "#F4F4F4",
+        backgroundColor: theme === "dark" ? "#121212" : "#FFFFFF",
         color: theme === "dark" ? "#ffffff" : "#000000",
         transition: "0.1s ease-in-out",
       }}

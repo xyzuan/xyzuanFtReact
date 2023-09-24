@@ -2,8 +2,9 @@
 
 import { manrope } from "@/constant/fonts";
 import { UserData } from "@/types/User";
-import { Card, Link, Typography } from "@mui/material";
-import { useSession } from "next-auth/react";
+import { Card, Container, Link, Typography } from "@mui/material";
+import { LayoutDashboardIcon, LogOutIcon } from "lucide-react";
+import { signOut, useSession } from "next-auth/react";
 import { useTheme } from "next-themes";
 import React, { useState } from "react";
 
@@ -14,51 +15,62 @@ function AdminHeader() {
   const { theme } = useTheme();
 
   return (
-    <Card
-      sx={{
-        display: "flex",
-        backgroundColor: theme === "dark" ? "white" : "black",
-        alignItems: "center",
-        borderRadius: "24px",
-        color: theme === "dark" ? "dark" : "white",
-        padding: "24px",
-        marginTop: "18px",
-        marginX: "18px",
-      }}
-    >
-      <Typography
-        className={`${manrope.className}`}
+    <Container>
+      <Card
         sx={{
-          flexGrow: "1",
+          display: "flex",
+          backgroundColor: theme === "dark" ? "white" : "black",
+          alignItems: "center",
+          borderRadius: "24px",
+          color: theme === "dark" ? "dark" : "white",
+          padding: "24px",
+          marginTop: "18px",
         }}
       >
-        Hi, {sessionData.user.name}
-      </Typography>
-
-      <Link href="/admin/dashboard" color="inherit" underline="none">
-        <Card
+        <Typography
+          className={`${manrope.className}`}
           sx={{
-            color: theme === "dark" ? "white" : "black",
-            backgroundColor: theme === "dark" ? "black" : "white",
-            padding: "4px",
-            paddingX: "18px",
-            borderRadius: "99px",
-            boxShadow: "none",
+            flexGrow: "1",
           }}
         >
-          <Typography
-            className={`${manrope.className}`}
+          Hi, {sessionData.user.name}
+        </Typography>
+
+        <Link href="/admin/dashboard">
+          <Card
             sx={{
-              fontWeight: "medium",
-              fontSize: "14px",
-              userSelect: "none",
+              color: theme === "dark" ? "white" : "black",
+              backgroundColor: theme === "dark" ? "black" : "white",
+              padding: "8px",
+              borderRadius: "99px",
+              boxShadow: "none",
             }}
           >
-            Dashboard
-          </Typography>
-        </Card>
-      </Link>
-    </Card>
+            <LayoutDashboardIcon />
+          </Card>
+        </Link>
+        <Link href="">
+          <Card
+            sx={{
+              color: theme === "dark" ? "white" : "black",
+              backgroundColor: theme === "dark" ? "black" : "white",
+              padding: "8px",
+              borderRadius: "99px",
+              boxShadow: "none",
+              marginLeft: "8px",
+            }}
+          >
+            <LogOutIcon
+              onClick={() =>
+                signOut({
+                  callbackUrl: "/",
+                })
+              }
+            />
+          </Card>
+        </Link>
+      </Card>
+    </Container>
   );
 }
 

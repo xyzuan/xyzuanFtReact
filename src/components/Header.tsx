@@ -65,23 +65,25 @@ function Header() {
             transition: "0.3s ease-in-out",
           }}
         >
-          <Image
-            width={isMobile ? "58" : "142"}
-            height="58"
-            src={
-              isMobile
-                ? theme === "dark"
-                  ? "/assets/xyzuan.svg"
-                  : "/assets/xyzuan-dark.svg"
-                : theme === "dark"
-                ? "/assets/xyzuanland.svg"
-                : "/assets/xyzuanland-dark.svg"
-            }
-            alt="xyzuan"
-            style={{
-              width: "auto",
-            }}
-          />
+          <Link href="/admin" color="inherit" underline="none">
+            <Image
+              width={isMobile ? "58" : "142"}
+              height="58"
+              src={
+                isMobile
+                  ? theme === "dark"
+                    ? "/assets/xyzuan.svg"
+                    : "/assets/xyzuan-dark.svg"
+                  : theme === "dark"
+                  ? "/assets/xyzuanland.svg"
+                  : "/assets/xyzuanland-dark.svg"
+              }
+              alt="xyzuan"
+              style={{
+                width: "auto",
+              }}
+            />
+          </Link>
           <Box flexGrow={1} />
           <Grid
             sx={{

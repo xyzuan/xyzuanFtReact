@@ -60,7 +60,7 @@ function PortofolioSection() {
         grasp of my style
       </Typography>
       <Grid container spacing="24px">
-        {portfolio.map((item) => (
+        {portfolio.reverse().map((item) => (
           <Grid
             data-aos="fade-up"
             key={item.id}

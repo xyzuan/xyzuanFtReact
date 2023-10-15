@@ -42,7 +42,7 @@ function PortofolioCard({ title, desc, img, href }: PortofolioCardProps) {
               ? "0 0 30px rgba(128, 128, 128, 0.5)"
               : "0 0 30px rgba(128, 128, 128, 0.1)",
             borderRadius: "32px",
-            backgroundColor: theme === "dark" ? "#212121" : "#F4F4F4",
+            backgroundColor: theme === "dark" ? "#121212" : "#ffffff",
             color: theme === "dark" ? "#ffffff" : "#000000",
             transition: "0.1s ease-in-out",
           }}
